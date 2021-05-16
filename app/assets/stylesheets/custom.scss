@@ -72,6 +72,7 @@ p {
 
 footer {
   margin-top: 45px;
+  margin-bottom: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
   color: #777;
@@ -97,4 +98,15 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
+}
+
+.inner{
+  margin: 25px auto;
+  max-width: 750px;
+}
+
+.line{
+  margin: 25px auto;
+  max-width: 750px;
+  border-top: 1px solid #eaeaea;
 }
