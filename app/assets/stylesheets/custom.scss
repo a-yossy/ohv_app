@@ -57,10 +57,10 @@ p {
   margin-right: 10px;
   font-size: 1.7em;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
+
 }
 
 #logo:hover {
@@ -100,9 +100,19 @@ footer ul li {
   margin-left: 15px;
 }
 
-.inner{
+.inner_top{
+  margin: 25px auto;
+  max-width: 1440px;
+}
+
+.inner_bio{
   margin: 25px auto;
   max-width: 750px;
+}
+
+.inner_video{
+  margin: 25px auto;
+  max-width: 560px;
 }
 
 .line{
