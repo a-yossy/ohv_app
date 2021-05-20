@@ -1,0 +1,30 @@
+<div class="inner_top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="pull-right">
+          <%= image_tag "#{@picture}", :height => "300" %>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <p style="text-align: left">
+          <b><%= @music[:type] %></b><br>
+          <span style="font-weight:bold; font-size:180%">
+            <%= @music[:title] %><br>
+          </span>
+          <%= @music[:date] %>RELEASE
+        <hr>
+        <p style="text-align: left">
+          <% @music[:song].each do |song| %>
+            <%= song %><br>
+          <% end %><hr>
+          <p style="text-align: left">
+          Price:<%= @music[:price] %><br>
+          <%= link_to @music[:url], target: :_blank, rel: :noopener do %>
+            <i class="fas fa-external-link-alt"></i>音源はこちら
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
