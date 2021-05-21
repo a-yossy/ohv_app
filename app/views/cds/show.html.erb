@@ -12,10 +12,10 @@
           <span style="font-weight:bold; font-size:180%">
             <%= @cd.title %><br>
           </span>
-          <%= @cd.date %>RELEASE
+          <%= @cd.release_date %>RELEASE
         <hr>
         <p style="text-align: left">
-          <% @song.each do |song| %>
+          <% @songs.each do |song| %>
             <%= song.track_number %>.
             <%= song.name %><br>
           <% end %><hr>

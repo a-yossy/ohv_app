@@ -1,10 +1,11 @@
 class CdsController < ApplicationController
   def index
+    @cds = Cd.all
   end
 
   def show
     @cd = Cd.find(params[:id])
-    @song = @cd.songs
+    @songs = @cd.songs
     @picture = @cd.format + ".jpg"
   end
 end

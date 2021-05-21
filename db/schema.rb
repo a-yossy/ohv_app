@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_21_071248) do
+ActiveRecord::Schema.define(version: 2021_05_21_123453) do
 
   create_table "cds", force: :cascade do |t|
     t.string "format"
     t.string "title"
-    t.string "date"
+    t.string "release_date"
     t.string "price"
     t.string "url"
     t.datetime "created_at", precision: 6, null: false
