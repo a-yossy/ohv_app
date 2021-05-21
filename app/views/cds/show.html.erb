@@ -8,19 +8,20 @@
       </div>
       <div class="col-sm-6">
         <p style="text-align: left">
-          <b><%= @music[:type] %></b><br>
+          <b><%= @cd.format %></b><br>
           <span style="font-weight:bold; font-size:180%">
-            <%= @music[:title] %><br>
+            <%= @cd.title %><br>
           </span>
-          <%= @music[:date] %>RELEASE
+          <%= @cd.date %>RELEASE
         <hr>
         <p style="text-align: left">
-          <% @music[:song].each do |song| %>
-            <%= song %><br>
+          <% @song.each do |song| %>
+            <%= song.track_number %>.
+            <%= song.name %><br>
           <% end %><hr>
           <p style="text-align: left">
-          Price:<%= @music[:price] %><br>
-          <%= link_to @music[:url], target: :_blank, rel: :noopener do %>
+          Price:<%= @cd.price %><br>
+          <%= link_to @cd.url, target: :_blank, rel: :noopener do %>
             <i class="fas fa-external-link-alt"></i>音源はこちら
           <% end %>
         </p>

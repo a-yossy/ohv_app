@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_20_183738) do
+ActiveRecord::Schema.define(version: 2021_05_21_071248) do
 
-  create_table "musics", force: :cascade do |t|
-    t.string "type"
+  create_table "cds", force: :cascade do |t|
+    t.string "format"
     t.string "title"
     t.string "date"
     t.string "price"
@@ -25,11 +25,11 @@ ActiveRecord::Schema.define(version: 2021_05_20_183738) do
   create_table "songs", force: :cascade do |t|
     t.string "name"
     t.integer "track_number"
-    t.integer "music_id", null: false
+    t.integer "cd_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["music_id"], name: "index_songs_on_music_id"
+    t.index ["cd_id"], name: "index_songs_on_cd_id"
   end
 
-  add_foreign_key "songs", "musics"
+  add_foreign_key "songs", "cds"
 end

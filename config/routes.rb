@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root 'top_pages#show'
   resource :bio_page, only: %i[show]
   resource :video_page, only: %i[show]
-  resources :musics, only: %i[index show]
+  resources :cds, only: %i[index show]
 end
