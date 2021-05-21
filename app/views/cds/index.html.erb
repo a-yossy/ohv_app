@@ -2,7 +2,7 @@
   <% @cds.each do |cd| %>
     <div class="inner_music">
       <%= link_to cd_path(cd.id) do %>
-        <%= image_tag "#{cd.format}.jpg", :height => '500' %>
+        <%= image_tag "#{cd.picture}", :height => '500' %>
       <% end %>
     </div>
   <% end %>
