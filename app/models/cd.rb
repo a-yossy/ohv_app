@@ -1,5 +1,6 @@
 class Cd < ApplicationRecord
   has_many :songs
+  default_scope -> { order(created_at: :desc) }
   validates :format, presence: true
   validates :picture, presence: true
   validates :title, presence: true
