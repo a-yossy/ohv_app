@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_22_080108) do
+ActiveRecord::Schema.define(version: 2021_05_23_143529) do
 
   create_table "cds", force: :cascade do |t|
     t.string "format", null: false
     t.string "picture", null: false
     t.string "title", null: false
     t.string "release_date", null: false
-    t.string "price", null: false
+    t.integer "price", null: false
     t.string "url", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
