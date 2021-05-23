@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_23_143529) do
+ActiveRecord::Schema.define(version: 2021_05_23_144655) do
 
   create_table "cds", force: :cascade do |t|
     t.string "format", null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2021_05_23_143529) do
   create_table "songs", force: :cascade do |t|
     t.string "name", null: false
     t.integer "track_number", null: false
-    t.integer "cd_id", null: false
+    t.string "cd_format", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
