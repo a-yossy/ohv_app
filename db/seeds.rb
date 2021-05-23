@@ -11,16 +11,16 @@ Cd.create(format:"1st demo", picture:"1st demo.jpg", title:"1st demo", release_d
 Cd.create(format:"1st EP", picture:"1st EP.jpg", title:"錯綜", release_date:"2020.01.24", price:1500, url:"https://dot2line.thebase.in/items/26063169")
 Cd.create(format:"1st single", picture:"1st single.jpg", title:"秘すれば花", release_date:"2020.12.18", price:153, url:"https://linkco.re/nxa1Qg4H?lang=ja")
 
-#Songモデルの初期データ
-first_demo_cd = Cd.find_by(format: "1st demo")
-first_ep_cd   = Cd.find_by(format: "1st EP")
-first_single_cd = Cd.find_by(format: "1st single")
+first_demo_id = Cd.find_by(format: "1st demo").id
+first_ep_id = Cd.find_by(format: "1st EP").id
+first_single_id = Cd.find_by(format: "1st single").id
 
-Song.create(name:"Transcend", track_number:1, cd_format:first_demo_cd)
-Song.create(name:"死灰", track_number:2, cd_format:first_demo_cd)
-Song.create(name:"Honesty", track_number:1, cd_format:first_ep_cd)
-Song.create(name:"Thistle", track_number:2, cd_format:first_ep_cd)
-Song.create(name:"Ruhuna(feat. 水咲加奈)", track_number:3, cd_format:first_ep_cd)
-Song.create(name:"Transcend", track_number:4, cd_format:first_ep_cd)
-Song.create(name:"錯綜する片隅", track_number:5, cd_format:first_ep_cd)
-Song.create(name:"秘すれば花", track_number:1, cd_format:first_single_cd)
+#Songモデルの初期データ
+Song.create(name:"Transcend", track_number:1, cd_id:first_demo_id)
+Song.create(name:"死灰", track_number:2, cd_id:first_demo_id)
+Song.create(name:"Honesty", track_number:1, cd_id:first_ep_id)
+Song.create(name:"Thistle", track_number:2, cd_id:first_ep_id)
+Song.create(name:"Ruhuna(feat. 水咲加奈)", track_number:3, cd_id:first_ep_id)
+Song.create(name:"Transcend", track_number:4, cd_id:first_ep_id)
+Song.create(name:"錯綜する片隅", track_number:5, cd_id:first_ep_id)
+Song.create(name:"秘すれば花", track_number:1, cd_id:first_single_id)

@@ -4,7 +4,7 @@ class CdsController < ApplicationController
   end
 
   def show
-    @cd = Cd.find_by(params[:id])
+    @cd = Cd.find_by(id: params[:id])
     @songs = @cd.songs
   end
 end
