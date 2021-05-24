@@ -10,6 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2021_05_23_144655) do
 
+  create_table "cds", force: :cascade do |t|
+    t.string "format", null: false
+    t.string "picture", null: false
+    t.string "title", null: false
+    t.string "release_date", null: false
+    t.integer "price", null: false
+    t.string "url", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string "name", null: false
+    t.integer "track_number", null: false
+    t.integer "cd_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["cd_id"], name: "index_songs_on_cd_id"
+  end
+
+  add_foreign_key "songs", "cds"
 end
