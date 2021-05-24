@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2021_05_23_144655) do
     t.integer "cd_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["cd_id"], name: "index_songs_on_cd_id"
   end
 
+  add_foreign_key "songs", "cds"
 end
