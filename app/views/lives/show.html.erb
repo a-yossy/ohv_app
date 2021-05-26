@@ -1,0 +1,44 @@
+<div class="inner_bio">
+  <%= month_calendar events: @lives do |date, lives| %>
+    <%= date.day %>
+
+    <% lives.each do |live| %>
+      <div class="content">
+        <a class="js-modal-open" href="">
+          <%= live.title %><br>
+          <%= live.place %>
+        </a>
+      </div>
+      <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+
+          <%= live.live_date %><br>
+          <span style="font-weight:bold; font-size:150%">
+            <%= live.title %><br>
+          </span>
+          <%= live.place %><br>
+          <%= simple_format(live.detail) %>
+          OPEN<%= live.start_hour %>/START<%= live.open_hour %><br>
+          ADV¥<%= live.adv_price %>/DOOR<%= live.door_price %> +1DRINK<br>
+
+          <a class="js-modal-close" href="">close</a>
+        </div>
+      </div>
+
+    <% end %>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+    $(function(){
+        $('.js-modal-open').on('click',function(){
+            $('.js-modal').fadeIn();
+            return false;
+        });
+        $('.js-modal-close').on('click',function(){
+            $('.js-modal').fadeOut();
+            return false;
+        });
+    });
+</script>
