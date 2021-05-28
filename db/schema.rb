@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2021_05_25_125253) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "lives", force: :cascade do |t|
+  create_table "live_calendar_pages", force: :cascade do |t|
     t.string "live_date", null: false
     t.string "place", null: false
     t.string "title", null: false
