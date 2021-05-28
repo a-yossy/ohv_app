@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_05_25_125253) do
     t.string "release_date", null: false
     t.integer "price", null: false
     t.string "url", null: false
+    t.integer "release_number", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,8 +31,8 @@ ActiveRecord::Schema.define(version: 2021_05_25_125253) do
     t.string "detail", null: false
     t.string "open_hour", null: false
     t.string "start_hour", null: false
-    t.integer "adv_price", null: false
-    t.integer "door_price", null: false
+    t.integer "advance_ticket_price", null: false
+    t.integer "doors_ticket_price", null: false
     t.datetime "start_time", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

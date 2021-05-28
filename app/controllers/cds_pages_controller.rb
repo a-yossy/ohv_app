@@ -1,4 +1,4 @@
-class CdsController < ApplicationController
+class CdsPagesController < ApplicationController
   def index
     @cds = Cd.all
   end

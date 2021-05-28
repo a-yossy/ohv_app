@@ -9,13 +9,16 @@
 #Cdモデルの初期データ
 Cd.create(format:"1st demo", picture:"1st demo.jpg", title:"1st demo",
           release_date:"2018.10.06", price:500,
-          url:"https://outsidehervision.bandcamp.com/releases")
+          url:"https://outsidehervision.bandcamp.com/releases",
+          release_number: 1)
 Cd.create(format:"1st EP", picture:"1st EP.jpg", title:"錯綜",
           release_date:"2020.01.24", price:1500,
-          url:"https://dot2line.thebase.in/items/26063169")
+          url:"https://dot2line.thebase.in/items/26063169",
+          release_number: 2)
 Cd.create(format:"1st single", picture:"1st single.jpg", title:"秘すれば花",
           release_date:"2020.12.18", price:153,
-          url:"https://linkco.re/nxa1Qg4H?lang=ja")
+          url:"https://linkco.re/nxa1Qg4H?lang=ja",
+          release_number: 3)
 
 #Songモデルの初期データ
 first_demo_cd = Cd.find_by(format: "1st demo")
@@ -37,10 +40,10 @@ Live.create(live_date:"2020.2.24 MON", place:"@ANTIKNOCK",
             detail:"act/ RiTTLEBOY, Stranded, Hopeless Raven, ikigatari,
                     WITT, makeshift, Catalysts, WEATHERED, kokeshi,
                     from there on, Miles Away",
-            open_hour:"13:30", start_hour:"14:00", adv_price:2200, door_price:2700,
+            open_hour:"13:30", start_hour:"14:00", advance_ticket_price:2200, doors_ticket_price:2700,
             start_time:"2020/02/24")
 Live.create(live_date:"2020.8.29 SAT", place:"@福井CHOP",
             title:"PLAY LOUD",
             detail:"act/ totalfeedback, ROLENT, The AshRay",
-            open_hour:"18:00", start_hour:"18:30", adv_price:2000, door_price:2500,
+            open_hour:"18:00", start_hour:"18:30", advance_ticket_price:2000, doors_ticket_price:2500,
             start_time:"2020/08/29")

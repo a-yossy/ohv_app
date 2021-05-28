@@ -7,8 +7,8 @@ class CreateLives < ActiveRecord::Migration[6.1]
       t.string :detail, null: false
       t.string :open_hour, null: false
       t.string :start_hour, null: false
-      t.integer :adv_price, null: false
-      t.integer :door_price, null: false
+      t.integer :advance_ticket_price, null: false
+      t.integer :doors_ticket_price, null: false
       t.datetime :start_time, null: false
 
       t.timestamps

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resource :bio_page, only: %i[show]
   resource :video_page, only: %i[show]
   resource :live, only: %i[show]
-  resources :cds, only: %i[index show]
+  resources :cds_pages, only: %i[index show]
 end
