@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_23_144655) do
+ActiveRecord::Schema.define(version: 2021_05_25_125253) do
 
   create_table "cds", force: :cascade do |t|
     t.string "format", null: false
@@ -19,6 +19,21 @@ ActiveRecord::Schema.define(version: 2021_05_23_144655) do
     t.string "release_date", null: false
     t.integer "price", null: false
     t.string "url", null: false
+    t.integer "release_number", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "live_calendar_pages", force: :cascade do |t|
+    t.string "live_date", null: false
+    t.string "place", null: false
+    t.string "title", null: false
+    t.string "detail", null: false
+    t.string "open_hour", null: false
+    t.string "start_hour", null: false
+    t.integer "advance_ticket_price", null: false
+    t.integer "doors_ticket_price", null: false
+    t.datetime "start_time", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
