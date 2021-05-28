@@ -1,0 +1,19 @@
+header.navbar.navbar-fixed-top.navbar-inverse
+  .container
+    = link_to "Outside Her Vision", root_path, id: "logo"
+    nav
+      ul.nav.navbar-nav.navbar-right
+        li
+          = link_to "NEWS",    '#'
+        li
+          = link_to "LIVE",    live_calendar_page_path
+        li
+          = link_to "BIO",     bio_page_path
+        li
+          = link_to "MUSIC",   cds_pages_path
+        li
+          = link_to "VIDEOS",  video_page_path
+        li
+          = link_to "MERCH",   '#'
+        li
+          = link_to "CONTACT", '#'
