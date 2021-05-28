@@ -1,0 +1,34 @@
+.inner_bio
+  = month_calendar events: @lives do |date, lives|
+    = date.day
+    - lives.each do |live|
+      .content
+        a.js-modal-open[href=""]
+          = live.title
+          br
+          = live.place
+      .modal.js-modal
+        .modal__bg.js-modal-close
+        .modal__content
+          = live.live_date
+          br
+          span[style="font-weight:bold; font-size:150%"]
+            = live.title
+            br
+          = live.place
+          br
+          = simple_format(live.detail)
+          |  OPEN
+          = live.start_hour
+          | /START
+          = live.open_hour
+          br
+          |  ADV¥
+          = live.advance_ticket_price
+          | /DOOR
+          = live.doors_ticket_price
+          |  +1DRINK
+          br
+          a.js-modal-close[href=""]
+            | close
+= javascript_pack_tag 'live_calendar_pages/modal'

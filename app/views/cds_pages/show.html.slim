@@ -1,0 +1,31 @@
+.inner_top
+  .container
+    .row
+      .col-sm-6
+        .pull-right
+          = image_tag @cd.picture, :height => "300"
+      .col-sm-6
+        p[style="text-align: left"]
+          b
+            = @cd.format
+          br
+          span[style="font-weight:bold; font-size:180%"]
+            = @cd.title
+            br
+          = @cd.release_date
+          | RELEASE 
+        hr
+        p[style="text-align: left"]
+          - @songs.each do |song|
+            = song.track_number
+            | . 
+            = song.name
+            br
+        hr
+        p[style="text-align: left"]
+          |  Price:¥
+          = @cd.price
+          br
+          = link_to @cd.url, target: :_blank, rel: :noopener do
+            i.fas.fa-external-link-alt
+            | 音源はこちら 

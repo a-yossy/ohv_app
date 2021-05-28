@@ -1,9 +1,0 @@
-<div class="inner_top">
-  <% @cds.each do |cd| %>
-    <div class="inner_music">
-      <%= link_to cds_page_path(cd) do %>
-        <%= image_tag cd.picture, :height => '500' %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
