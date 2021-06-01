@@ -1,0 +1,13 @@
+.inner_top
+  .inner_news_show
+    = image_tag @information.picture, :height => '500'
+    br
+    .string_news_show1
+      b
+        = @information.title
+      br
+      small
+        = @information.information_date
+      br
+    .string_news_show2
+      = simple_format(@information.content)

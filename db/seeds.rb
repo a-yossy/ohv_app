@@ -35,15 +35,61 @@ first_ep_cd.songs.create(name:"錯綜する片隅", track_number:5)
 first_single_cd.songs.create(name:"秘すれば花", track_number:1)
 
 #Liveモデルの初期データ
-Live.create(live_date:"2020.2.24 MON", place:"@ANTIKNOCK",
+Live.create(live_date:"2020.02.24 MON", place:"@新宿ANTIKNOCK",
             title:"RiTTLEBOY × Stranded split “flat side” release tour",
             detail:"act/ RiTTLEBOY, Stranded, Hopeless Raven, ikigatari,
                     WITT, makeshift, Catalysts, WEATHERED, kokeshi,
                     from there on, Miles Away",
             open_hour:"13:30", start_hour:"14:00", advance_ticket_price:2200, doors_ticket_price:2700,
             start_time:"2020/02/24")
-Live.create(live_date:"2020.8.29 SAT", place:"@福井CHOP",
+Live.create(live_date:"2020.08.29 SAT", place:"@福井CHOP",
             title:"PLAY LOUD",
             detail:"act/ totalfeedback, ROLENT, The AshRay",
             open_hour:"18:00", start_hour:"18:30", advance_ticket_price:2000, doors_ticket_price:2500,
             start_time:"2020/08/29")
+
+#Informationモデルの初期データ
+Information.create(title: '1st demoをリリースしました。',
+                   picture: "1st demo.jpg", information_date: "2018.10.06",
+                   information_number: 1,
+                   content: "収録楽曲:
+                             01: Transcend
+                             02: 死灰")
+Information.create(title: '1st EP "錯綜"をリリースしました。',
+                   picture: "1st EP.jpg", information_date: "2019.12.26",
+                   information_number: 2,
+                   content: "収録楽曲:
+                             01: Honesty
+                             02: Thistle
+                             03: Ruhuna(feat. 水咲加奈)
+                             04: Transcend
+                             05: 錯綜する片隅")
+Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しました。',
+                   picture: "live_0224.jpeg", information_date: "2020.01.18",
+                   information_number: 3,
+                   content: "2020.02.24 MON
+                             RiTTLEBOY × Stranded split “flat side” release tour
+                             @新宿ANTIKNOCK
+
+                             act/ RiTTLEBOY, Stranded, Hopeless Raven, ikigatari,
+                             WITT, makeshift, Catalysts, WEATHERED, kokeshi,
+                             from there on, Miles Away
+
+                             OPEN14:00/START13:30
+                             ADV¥2200/DOOR2700 +1DRINK")
+Information.create(title: '福井CHOPでライブが決定しました。',
+                   picture: "live_0829.jpeg", information_date: "2020.08.16",
+                   information_number: 4,
+                   content: "2020.08.29 SAT
+                             PLAY LOUD
+                             @福井CHOP
+
+                             act/ totalfeedback, ROLENT, The AshRay
+
+                             OPEN18:30/START18:00
+                             ADV¥2000/DOOR2500 +1DRINK")
+Information.create(title: '1st single "秘すれば花"をデジタルリリースしました。',
+                   picture: "1st single.jpg", information_date: "2020.12.18",
+                   information_number: 5,
+                   content: "収録楽曲:
+                             01: 秘すれば花")
