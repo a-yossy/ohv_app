@@ -5,7 +5,7 @@ class CreateInformation < ActiveRecord::Migration[6.1]
       t.string :picture, null: false
       t.date :announcement_date, null: false
       t.text :content, null: false
-      t.integer :priority, null: false
+      t.integer :priority, null: false, default: 0
 
       t.timestamps
     end

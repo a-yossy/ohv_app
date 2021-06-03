@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2021_05_28_120601) do
     t.string "picture", null: false
     t.date "announcement_date", null: false
     t.text "content", null: false
-    t.integer "priority", null: false
+    t.integer "priority", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

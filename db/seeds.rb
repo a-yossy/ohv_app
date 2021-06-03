@@ -48,13 +48,11 @@ Live.create(place:"@福井CHOP",
 #Informationモデルの初期データ
 Information.create(title: '1st demoをリリースしました。',
                    picture: "1st demo.jpg", announcement_date: "2018-10-06",
-                   priority: 0,
                    content: "収録楽曲:
                              01: Transcend
                              02: 死灰")
 Information.create(title: '1st EP "錯綜"をリリースしました。',
                    picture: "1st EP.jpg", announcement_date: "2019-12-26",
-                   priority: 0,
                    content: "収録楽曲:
                              01: Honesty
                              02: Thistle
@@ -63,7 +61,6 @@ Information.create(title: '1st EP "錯綜"をリリースしました。',
                              05: 錯綜する片隅")
 Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しました。',
                    picture: "live_0224.jpeg", announcement_date: "2020-01-18",
-                   priority: 0,
                    content: "2020.02.24 Mon
                              RiTTLEBOY × Stranded split “flat side” release tour
                              @新宿ANTIKNOCK
@@ -76,7 +73,6 @@ Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しまし�
                              ADV¥2200/DOOR2700 +1DRINK")
 Information.create(title: '福井CHOPでライブが決定しました。',
                    picture: "live_0829.jpeg", announcement_date: "2020-08-16",
-                   priority: 0,
                    content: "2020.08.29 Sat
                              PLAY LOUD
                              @福井CHOP
@@ -87,6 +83,5 @@ Information.create(title: '福井CHOPでライブが決定しました。',
                              ADV¥2000/DOOR2500 +1DRINK")
 Information.create(title: '1st single "秘すれば花"をデジタルリリースしました。',
                    picture: "1st single.jpg", announcement_date: "2020-12-18",
-                   priority: 0,
                    content: "収録楽曲:
                              01: 秘すれば花")
