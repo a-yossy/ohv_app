@@ -50,14 +50,14 @@ Live.create(live_date:"2020.08.29 SAT", place:"@福井CHOP",
 
 #Informationモデルの初期データ
 Information.create(title: '1st demoをリリースしました。',
-                   picture: "1st demo.jpg", announcement_date: "2018.10.06",
-                   information_number: 1,
+                   picture: "1st demo.jpg", announcement_date: "2018-10-06",
+                   priority: 0,
                    content: "収録楽曲:
                              01: Transcend
                              02: 死灰")
 Information.create(title: '1st EP "錯綜"をリリースしました。',
-                   picture: "1st EP.jpg", announcement_date: "2019.12.26",
-                   information_number: 2,
+                   picture: "1st EP.jpg", announcement_date: "2019-12-26",
+                   priority: 0,
                    content: "収録楽曲:
                              01: Honesty
                              02: Thistle
@@ -65,8 +65,8 @@ Information.create(title: '1st EP "錯綜"をリリースしました。',
                              04: Transcend
                              05: 錯綜する片隅")
 Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しました。',
-                   picture: "live_0224.jpeg", announcement_date: "2020.01.18",
-                   information_number: 3,
+                   picture: "live_0224.jpeg", announcement_date: "2020-01-18",
+                   priority: 0,
                    content: "2020.02.24 MON
                              RiTTLEBOY × Stranded split “flat side” release tour
                              @新宿ANTIKNOCK
@@ -78,8 +78,8 @@ Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しまし�
                              OPEN14:00/START13:30
                              ADV¥2200/DOOR2700 +1DRINK")
 Information.create(title: '福井CHOPでライブが決定しました。',
-                   picture: "live_0829.jpeg", announcement_date: "2020.08.16",
-                   information_number: 4,
+                   picture: "live_0829.jpeg", announcement_date: "2020-08-16",
+                   priority: 0,
                    content: "2020.08.29 SAT
                              PLAY LOUD
                              @福井CHOP
@@ -89,7 +89,7 @@ Information.create(title: '福井CHOPでライブが決定しました。',
                              OPEN18:30/START18:00
                              ADV¥2000/DOOR2500 +1DRINK")
 Information.create(title: '1st single "秘すれば花"をデジタルリリースしました。',
-                   picture: "1st single.jpg", announcement_date: "2020.12.18",
-                   information_number: 5,
+                   picture: "1st single.jpg", announcement_date: "2020-12-18",
+                   priority: 0,
                    content: "収録楽曲:
                              01: 秘すれば花")

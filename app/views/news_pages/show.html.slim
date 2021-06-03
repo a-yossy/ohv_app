@@ -7,7 +7,7 @@
         = @information.title
       br
       small
-        = @information.announcement_date
+        = @information.announcement_date.strftime("%Y.%m.%d")
       br
     .string_news_show2
       = simple_format(@information.content)
