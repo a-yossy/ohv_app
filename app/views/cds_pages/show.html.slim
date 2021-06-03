@@ -12,7 +12,7 @@
           span[style="font-weight:bold; font-size:180%"]
             = @cd.title
             br
-          = @cd.release_date
+          = @cd.release_date.strftime("%Y.%m.%d")
           | RELEASE 
         hr
         p[style="text-align: left"]

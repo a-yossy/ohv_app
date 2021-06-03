@@ -10,7 +10,7 @@
       .modal.js-modal
         .modal__bg.js-modal-close
         .modal__content
-          = live.live_date
+          = live.start_time.strftime("%Y.%m.%d %a")
           br
           span[style="font-weight:bold; font-size:150%"]
             = live.title

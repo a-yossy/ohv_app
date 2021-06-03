@@ -1,0 +1,11 @@
+.inner_top
+  - @informations.each do |information|
+    .inner_news_index
+      = link_to news_page_path(information) do
+        = image_tag information.picture, :height => '400'
+        br
+        .string_news_index
+          b
+            = information.title
+          br
+          = information.announcement_date.strftime("%Y.%m.%d")
