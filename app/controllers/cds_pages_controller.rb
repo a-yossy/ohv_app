@@ -1,10 +1,10 @@
 class CdsPagesController < ApplicationController
   def index
-    @cds = Cd.recent.all
+    @cds = Cd.recently_released_at.all
   end
 
   def show
     @cd = Cd.find_by(id: params[:id])
-    @songs = @cd.songs.song_order
+    @songs = @cd.songs.recording_order
   end
 end

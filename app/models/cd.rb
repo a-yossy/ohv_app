@@ -1,6 +1,6 @@
 class Cd < ApplicationRecord
   has_many :songs
-  scope :recent, -> { order(release_date: :desc) }
+  scope :recently_released_at, -> { order(release_date: :desc) }
   validates :format, presence: true
   validates :picture, presence: true
   validates :title, presence: true

@@ -1,5 +1,5 @@
 class Information < ApplicationRecord
-  scope :recent, -> { order(announcement_date: :desc) }
+  scope :recently_announced_at, -> { order(announcement_date: :desc) }
   validates :title, presence: true
   validates :picture, presence: true
   validates :announcement_date, presence: true
