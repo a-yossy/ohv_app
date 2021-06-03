@@ -8,6 +8,8 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 gem 'simple_calendar', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'slim'
+gem 'rspec'
+gem 'factory_bot'
 gem 'html2slim'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
@@ -54,6 +56,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'shoulda-matchers', '~> 4.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
