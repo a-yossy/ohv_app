@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2021_05_28_120601) do
   end
 
   create_table "lives", force: :cascade do |t|
-    t.string "live_date", null: false
     t.string "place", null: false
     t.string "title", null: false
     t.string "detail", null: false

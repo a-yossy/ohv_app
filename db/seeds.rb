@@ -32,14 +32,14 @@ first_ep_cd.songs.create(name:"錯綜する片隅", track_number:5)
 first_single_cd.songs.create(name:"秘すれば花", track_number:1)
 
 #Liveモデルの初期データ
-Live.create(live_date:"2020.02.24 MON", place:"@新宿ANTIKNOCK",
+Live.create(place:"@新宿ANTIKNOCK",
             title:"RiTTLEBOY × Stranded split “flat side” release tour",
             detail:"act/ RiTTLEBOY, Stranded, Hopeless Raven, ikigatari,
                     WITT, makeshift, Catalysts, WEATHERED, kokeshi,
                     from there on, Miles Away",
             open_hour:"13:30", start_hour:"14:00", advance_ticket_price:2200, doors_ticket_price:2700,
             start_time:"2020/02/24")
-Live.create(live_date:"2020.08.29 SAT", place:"@福井CHOP",
+Live.create(place:"@福井CHOP",
             title:"PLAY LOUD",
             detail:"act/ totalfeedback, ROLENT, The AshRay",
             open_hour:"18:00", start_hour:"18:30", advance_ticket_price:2000, doors_ticket_price:2500,
@@ -64,7 +64,7 @@ Information.create(title: '1st EP "錯綜"をリリースしました。',
 Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しました。',
                    picture: "live_0224.jpeg", announcement_date: "2020-01-18",
                    priority: 0,
-                   content: "2020.02.24 MON
+                   content: "2020.02.24 Mon
                              RiTTLEBOY × Stranded split “flat side” release tour
                              @新宿ANTIKNOCK
 
@@ -77,7 +77,7 @@ Information.create(title: '東京 新宿ANTIKNOCKでライブが決定しまし�
 Information.create(title: '福井CHOPでライブが決定しました。',
                    picture: "live_0829.jpeg", announcement_date: "2020-08-16",
                    priority: 0,
-                   content: "2020.08.29 SAT
+                   content: "2020.08.29 Sat
                              PLAY LOUD
                              @福井CHOP
 
