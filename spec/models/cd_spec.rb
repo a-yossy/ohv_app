@@ -41,7 +41,7 @@ RSpec.describe Cd, type: :model do
     let!(:old_cd) { create(:cd, release_date: "2021-01-01") }
 
     it do
-      expect(Cd.recently_released_at.to_a).to eq [new_cd, old_cd]
+      expect(described_class.recently_released_at.to_a).to eq [new_cd, old_cd]
     end
   end
 end
