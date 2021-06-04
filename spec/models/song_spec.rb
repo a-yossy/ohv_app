@@ -5,7 +5,9 @@ RSpec.describe Song, type: :model do
     it { should validate_presence_of(:name) }
     it { should validate_presence_of(:track_number) }
     it { should validate_presence_of(:cd_id) }
-    it { should validate_numericality_of(:track_number).only_integer }
+    it { should validate_numericality_of(:track_number).
+                only_integer.
+                is_greater_than_or_equal_to(1)  }
   end
 
   describe 'recording_order' do
