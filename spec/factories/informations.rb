@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :information do
     sequence(:title) { |i| "title#{i}" }

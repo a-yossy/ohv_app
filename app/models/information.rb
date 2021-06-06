@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Information < ApplicationRecord
   scope :recently_announced_at, -> { order(announcement_date: :desc) }
   validates :title, presence: true

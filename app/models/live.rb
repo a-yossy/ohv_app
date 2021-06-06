@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Live < ApplicationRecord
   validates :place, presence: true
   validates :title, presence: true
