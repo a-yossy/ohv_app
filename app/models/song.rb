@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Song < ApplicationRecord
   scope :recording_order, -> { order(track_number: :asc) }
   validates :name, presence: true

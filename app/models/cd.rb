@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Cd < ApplicationRecord
   has_many :songs
   scope :recently_released_at, -> { order(release_date: :desc) }

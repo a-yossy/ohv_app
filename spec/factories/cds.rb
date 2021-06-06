@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 FactoryBot.define do
   factory :cd do
     sequence(:format) { |i| "format#{i}" }
