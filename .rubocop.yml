@@ -2,9 +2,20 @@ inherit_from: .rubocop_todo.yml
 
 # 自動生成されるものはチェック対象から除外する
 AllCops:
+  TargetRubyVersion: 2.7.1
+  TargetRailsVersion: 6.0.3.4
   Exclude:
     - "vendor/**/*" # rubocop config/default.yml
     - "db/schema.rb"
+    - "node_modules/**/*"
+    - "db/migrate/**/*"
+    - "app/channels/**/*"
+    - "config/**/*"
+    - "config.ru"
+    - "bin/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "log/**/*"
   DisplayCopNames: true
 
 ##################### Style ##################################
