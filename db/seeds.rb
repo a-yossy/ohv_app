@@ -42,12 +42,12 @@ Live.create(place: "@新宿ANTIKNOCK",
             detail: "act/ RiTTLEBOY, Stranded, Hopeless Raven, ikigatari,
                     WITT, makeshift, Catalysts, WEATHERED, kokeshi,
                     from there on, Miles Away",
-            open_hour: "13:30", start_hour: "14:00", advance_ticket_price: 2200, doors_ticket_price: 2700,
+            open_hour: "2020/02/24 13:30", start_hour: "2020/02/24 14:00", advance_ticket_price: 2200, doors_ticket_price: 2700,
             start_time: "2020/02/24")
 Live.create(place: "@福井CHOP",
             title: "PLAY LOUD",
             detail: "act/ totalfeedback, ROLENT, The AshRay",
-            open_hour: "18:00", start_hour: "18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
+            open_hour: "2020/08/29 18:00", start_hour: "2020/08/29 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
             start_time: "2020/08/29")
 
 # Informationモデルの初期データ
