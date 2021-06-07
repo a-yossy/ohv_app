@@ -103,10 +103,6 @@ Style/IfUnlessModifier:
 Style/StringChars:
   EnforcedStyle: consistent
 
-# private/protected は一段深くインデントする
-Layout/IndentationConsistency:
-  EnforcedStyle: indented_internal_methods
-
 # scope 等は複数行でも lambda ではなく ->{} で揃えた方が見た目が綺麗
 Style/Lambda:
   Enabled: false
