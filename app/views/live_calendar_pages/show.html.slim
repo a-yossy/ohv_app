@@ -19,13 +19,13 @@
           br
           = simple_format(live.detail)
           |  OPEN
-          = live.start_hour
+          = live.open_hour.strftime("%H:%M")
           | /START
-          = live.open_hour
+          = live.start_hour.strftime("%H:%M")
           br
           |  ADV¥
           = live.advance_ticket_price
-          | /DOOR
+          | /DOOR¥
           = live.doors_ticket_price
           |  +1DRINK
           br

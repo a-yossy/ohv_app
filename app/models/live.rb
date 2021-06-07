@@ -9,4 +9,11 @@ class Live < ApplicationRecord
   validates :advance_ticket_price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :doors_ticket_price, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
   validates :start_time, presence: true
+  validate :open_hour_earlier_than_start_hour
+
+  def open_hour_earlier_than_start_hour
+    if open_hour > start_hour
+      errors.add(:start_hour, "はOPEN以降の時間を設定して下さい")
+    end
+  end
 end
