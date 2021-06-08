@@ -1,5 +1,5 @@
 .inner_top
   - @cds.each do |cd|
     .inner_music
-      = link_to cds_page_path(cd) do
+      = link_to cd_page_path(cd) do
         = image_tag cd.picture, :height => '500'

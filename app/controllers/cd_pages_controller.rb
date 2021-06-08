@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CdsPagesController < ApplicationController
+class CdPagesController < ApplicationController
   def index
     @cds = Cd.recently_released_at.all
   end

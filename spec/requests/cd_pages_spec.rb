@@ -2,10 +2,10 @@
 
 require "rails_helper"
 
-RSpec.describe CdsPagesController, type: :request do
+RSpec.describe CdPagesController, type: :request do
   describe "#index" do
     it do
-      get cds_pages_path
+      get cd_pages_path
       expect(response).to have_http_status(200)
     end
   end
@@ -14,7 +14,7 @@ RSpec.describe CdsPagesController, type: :request do
     let(:cd) { create(:cd, picture: "1st demo.jpg") }
 
     it do
-      get cds_page_path(cd)
+      get cd_page_path(cd)
       expect(response).to have_http_status(200)
     end
   end
