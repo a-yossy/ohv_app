@@ -2,7 +2,7 @@
 
 class NewsPagesController < ApplicationController
   def index
-    @informations = Information.recently_announced_at.all
+    @informations = Information.recently_announced_at
   end
 
   def show
