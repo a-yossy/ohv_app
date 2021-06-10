@@ -3,9 +3,9 @@
 require "rails_helper"
 
 RSpec.describe ContactPagesController, type: :request do
-  describe "#show" do
+  describe "#new" do
     it do
-      get contact_page_path
+      get new_contact_page_path
       expect(response).to have_http_status(200)
     end
   end

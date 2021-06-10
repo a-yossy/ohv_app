@@ -90,3 +90,8 @@ Information.create(title: '1st single "秘すれば花"をデジタルリリー�
                    picture: "1st single.jpg", announcement_date: "2020-12-18",
                    content: "収録楽曲:
                              01: 秘すれば花")
+
+# Contactモデルの初期データ
+Contact.create(name: "name",
+               email: "email@example.com",
+               content: "content")
