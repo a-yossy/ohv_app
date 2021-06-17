@@ -13,6 +13,6 @@ class ContactMailer < ApplicationMailer
 
   def inquire_to_admin(contact)
     @contact = contact
-    mail to: contact.email, subject: "【Outside Her Vision】お問い合わせが届いています"
+    mail to: ENV['TOMAIL'], subject: "【Outside Her Vision】お問い合わせが届いています"
   end
 end
