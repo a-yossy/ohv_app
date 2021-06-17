@@ -12,7 +12,7 @@ class ContactPagesController < ApplicationController
       flash[:info] = "メールが送信されました"
       redirect_to root_url
     else
-      render "new"
+      render :new
     end
   end
 
