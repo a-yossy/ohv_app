@@ -7,8 +7,11 @@ class Contact < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX }
   validates :content, presence: true
 
-  def send_contact_email
+  def send_confirm_inquiry_email
     ContactMailer.confirm_inquiry(self).deliver_now
+  end
+
+  def send_inquire_to_admin_email
     ContactMailer.inquire_to_admin(self).deliver_now
   end
 end

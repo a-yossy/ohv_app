@@ -8,7 +8,8 @@ class ContactPagesController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      @contact.send_contact_email
+      @contact.send_confirm_inquiry_email
+      @contact.send_inquire_to_admin_email
       flash[:info] = "メールが送信されました"
       redirect_to root_url
     else
