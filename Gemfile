@@ -11,7 +11,7 @@ gem "dotenv-rails"
 gem "font-awesome-sass"
 gem "html2slim"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
-gem 'rails-i18n'
+gem "rails-i18n"
 gem "simple_calendar", "~> 2.0"
 gem "slim"
 # Use sqlite3 as the database for Active Record

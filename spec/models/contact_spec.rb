@@ -17,13 +17,13 @@ RSpec.describe Contact, type: :model do
       contact.errors
     end
 
-    context "with invalid address" do
+    context "with invalid email" do
       let(:email) { "email_example.com" }
 
       it { is_expected.to be_of_kind(:email, :invalid) }
     end
 
-    context "with valid address" do
+    context "with valid email" do
       let(:email) { "email@example.com" }
 
       it { is_expected.not_to be_of_kind(:email, :invalid) }
