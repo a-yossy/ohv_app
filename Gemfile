@@ -7,9 +7,11 @@ ruby "2.7.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "bootstrap-sass"
+gem "dotenv-rails"
 gem "font-awesome-sass"
 gem "html2slim"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
+gem "rails-i18n"
 gem "simple_calendar", "~> 2.0"
 gem "slim"
 # Use sqlite3 as the database for Active Record
@@ -64,7 +66,7 @@ group :test do
 end
 
 group :production do
-  gem 'pg'
+  gem "pg"
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]

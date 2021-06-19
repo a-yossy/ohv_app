@@ -1,0 +1,7 @@
+- if @contact.errors.any?
+  #error_explanation
+    ul
+      - @contact.errors.full_messages.each do |msg|
+        li
+          p[style="text-align: left"]
+            = msg
