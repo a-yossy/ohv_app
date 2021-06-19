@@ -54,6 +54,16 @@ Live.create(place: "@福井CHOP",
             detail: "act/ totalfeedback, ROLENT, The AshRay",
             open_hour: "2020/08/29 18:00", start_hour: "2020/08/29 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
             start_time: "2020/08/29")
+Live.create(place: "@金沢vanvanV4",
+            title: "bacho群雨TOUR",
+            detail: "act/ bacho, mother, alley",
+            open_hour: "2021/07/11 16:30", start_hour: "2021/07/11 17:00", advance_ticket_price: 3000, doors_ticket_price: 3000,
+            start_time: "2021/07/11")
+Live.create(place: "@福井CHOP",
+            title: "「コレが本当のマッスルビート」Outside Her Vision 2nd single “揺るがない距離は今”release party",
+            detail: "act/ A.W.O.L., The AshRay, WHITE ASTER, HEARTBURNER",
+            open_hour: "2021/07/22 18:00", start_hour: "2021/07/22 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
+            start_time: "2021/07/22")
 
 # Informationモデルの初期データ
 Information.create(title: "1st demoをリリースしました。",
