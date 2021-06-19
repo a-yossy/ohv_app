@@ -71,7 +71,7 @@ Information.create(title: "1st demoをリリースしました。",
                    content: "収録楽曲:
                              01: Transcend
                              02: 死灰")
-Information.create(title: '1st EP "錯綜"をリリースしました。',
+Information.create(title: "1st EP “錯綜“をリリースしました。",
                    picture: "1st EP.jpg", announcement_date: "2019-12-26",
                    content: "収録楽曲:
                              01: Honesty
@@ -101,7 +101,11 @@ Information.create(title: "福井CHOPでライブが決定しました。",
 
                              OPEN18:30/START18:00
                              ADV¥2000/DOOR2500 +1DRINK")
-Information.create(title: '1st single "秘すれば花"をデジタルリリースしました。',
+Information.create(title: "1st single “秘すれば花“をデジタルリリースしました。",
                    picture: "1st single.jpg", announcement_date: "2020-12-18",
                    content: "収録楽曲:
                              01: 秘すれば花")
+Information.create(title: "2nd single “揺るがない距離は今”をデジタルリリースしました。",
+                   picture: "2nd single.jpg", announcement_date: "2021-06-07",
+                   content: "収録楽曲:
+                             01: 揺るがない距離は今")
