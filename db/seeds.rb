@@ -29,6 +29,7 @@ Cd.create(format: "2nd single", picture: "2nd single.jpg", title: "揺るがな�
 first_demo_cd = Cd.find_by(format: "1st demo")
 first_ep_cd = Cd.find_by(format: "1st EP")
 first_single_cd = Cd.find_by(format: "1st single")
+second_single_cd = Cd.find_by(format: "2nd single")
 
 first_demo_cd.songs.create(name: "Transcend", track_number: 1)
 first_demo_cd.songs.create(name: "死灰", track_number: 2)
@@ -38,6 +39,7 @@ first_ep_cd.songs.create(name: "Ruhuna(feat. 水咲加奈)", track_number: 3)
 first_ep_cd.songs.create(name: "Transcend", track_number: 4)
 first_ep_cd.songs.create(name: "錯綜する片隅", track_number: 5)
 first_single_cd.songs.create(name: "秘すれば花", track_number: 1)
+second_single_cd.songs.create(name: "揺るがない距離は今", track_number: 1)
 
 # Liveモデルの初期データ
 Live.create(place: "@新宿ANTIKNOCK",
