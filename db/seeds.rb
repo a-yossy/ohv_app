@@ -21,6 +21,9 @@ Cd.create(format: "1st EP", picture: "1st EP.jpg", title: "錯綜",
 Cd.create(format: "1st single", picture: "1st single.jpg", title: "秘すれば花",
           release_date: "2020-12-18", price: 153,
           url: "https://linkco.re/nxa1Qg4H?lang=ja")
+Cd.create(format: "2nd single", picture: "2nd single.jpg", title: "揺るがない距離は今",
+          release_date: "2021-06-07", price: 153,
+          url: "https://linkco.re/r1zyVcrS")
 
 # Songモデルの初期データ
 first_demo_cd = Cd.find_by(format: "1st demo")
