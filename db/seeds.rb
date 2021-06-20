@@ -118,4 +118,4 @@ Video.create(title: "Thistle - 1st EP “錯綜“", release_date: "2019-12-26",
 Video.create(title: "秘すれば花 - 1st single", release_date: "2020-12-17",
              url: "https://www.youtube.com/embed/x7JCmITFm7U")
 Video.create(title: "揺るがない距離は今 - 2nd single", release_date: "2021-06-06",
-             url: "https://youtu.be/sT5hf_eNDNA")
+             url: "https://www.youtube.com/embed/sT5hf_eNDNA")
