@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Video < ApplicationRecord
   scope :recently_released_at, -> { order(release_date: :desc) }
   validates :title, presence: true
