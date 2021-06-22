@@ -21,11 +21,15 @@ Cd.create(format: "1st EP", picture: "1st EP.jpg", title: "錯綜",
 Cd.create(format: "1st single", picture: "1st single.jpg", title: "秘すれば花",
           release_date: "2020-12-18", price: 153,
           url: "https://linkco.re/nxa1Qg4H?lang=ja")
+Cd.create(format: "2nd single", picture: "2nd single.jpg", title: "揺るがない距離は今",
+          release_date: "2021-06-07", price: 153,
+          url: "https://linkco.re/r1zyVcrS")
 
 # Songモデルの初期データ
 first_demo_cd = Cd.find_by(format: "1st demo")
 first_ep_cd = Cd.find_by(format: "1st EP")
 first_single_cd = Cd.find_by(format: "1st single")
+second_single_cd = Cd.find_by(format: "2nd single")
 
 first_demo_cd.songs.create(name: "Transcend", track_number: 1)
 first_demo_cd.songs.create(name: "死灰", track_number: 2)
@@ -35,6 +39,7 @@ first_ep_cd.songs.create(name: "Ruhuna(feat. 水咲加奈)", track_number: 3)
 first_ep_cd.songs.create(name: "Transcend", track_number: 4)
 first_ep_cd.songs.create(name: "錯綜する片隅", track_number: 5)
 first_single_cd.songs.create(name: "秘すれば花", track_number: 1)
+second_single_cd.songs.create(name: "揺るがない距離は今", track_number: 1)
 
 # Liveモデルの初期データ
 Live.create(place: "@新宿ANTIKNOCK",
@@ -49,6 +54,16 @@ Live.create(place: "@福井CHOP",
             detail: "act/ totalfeedback, ROLENT, The AshRay",
             open_hour: "2020/08/29 18:00", start_hour: "2020/08/29 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
             start_time: "2020/08/29")
+Live.create(place: "@金沢vanvanV4",
+            title: "bacho群雨TOUR",
+            detail: "act/ bacho, mother, alley",
+            open_hour: "2021/07/11 16:30", start_hour: "2021/07/11 17:00", advance_ticket_price: 3000, doors_ticket_price: 3000,
+            start_time: "2021/07/11")
+Live.create(place: "@福井CHOP",
+            title: "「コレが本当のマッスルビート」Outside Her Vision 2nd single “揺るがない距離は今”release party",
+            detail: "act/ A.W.O.L., The AshRay, WHITE ASTER, HEARTBURNER",
+            open_hour: "2021/07/22 18:00", start_hour: "2021/07/22 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
+            start_time: "2021/07/22")
 
 # Informationモデルの初期データ
 Information.create(title: "1st demoをリリースしました。",
@@ -56,7 +71,7 @@ Information.create(title: "1st demoをリリースしました。",
                    content: "収録楽曲:
                              01: Transcend
                              02: 死灰")
-Information.create(title: '1st EP "錯綜"をリリースしました。',
+Information.create(title: "1st EP “錯綜“をリリースしました。",
                    picture: "1st EP.jpg", announcement_date: "2019-12-26",
                    content: "収録楽曲:
                              01: Honesty
@@ -86,7 +101,21 @@ Information.create(title: "福井CHOPでライブが決定しました。",
 
                              OPEN18:30/START18:00
                              ADV¥2000/DOOR2500 +1DRINK")
-Information.create(title: '1st single "秘すれば花"をデジタルリリースしました。',
+Information.create(title: "1st single “秘すれば花“をデジタルリリースしました。",
                    picture: "1st single.jpg", announcement_date: "2020-12-18",
                    content: "収録楽曲:
                              01: 秘すれば花")
+Information.create(title: "2nd single “揺るがない距離は今”をデジタルリリースしました。",
+                   picture: "2nd single.jpg", announcement_date: "2021-06-07",
+                   content: "収録楽曲:
+                             01: 揺るがない距離は今")
+
+# Videoモデルの初期データ
+Video.create(title: "1st demo", release_date: "2018-10-05",
+             url: "https://www.youtube.com/embed/zY7ZE9kwS1A")
+Video.create(title: "Thistle - 1st EP “錯綜“", release_date: "2019-12-26",
+             url: "https://www.youtube.com/embed/Z6hH7TJGgh4")
+Video.create(title: "秘すれば花 - 1st single", release_date: "2020-12-17",
+             url: "https://www.youtube.com/embed/x7JCmITFm7U")
+Video.create(title: "揺るがない距離は今 - 2nd single", release_date: "2021-06-06",
+             url: "https://www.youtube.com/embed/sT5hf_eNDNA")
