@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resource :bio_page, only: %i[show]
   resource :video_page, only: %i[show]
   resource :live_calendar_page, only: %i[show]
+  resource :live_page, only: %i[show]
   resource :contact_page, only: %i[new create]
   resources :cd_pages, only: %i[index show]
   resources :news_pages, only: %i[index show]
