@@ -1,0 +1,7 @@
+= form_tag(live_page_path, method: :get, remote: true) do
+  = select_tag(:live_date,
+               options_for_select(@live_date_list, date),
+               class: "select-drop")
+
+- @filter_lives.each do |live|
+  = live.title
