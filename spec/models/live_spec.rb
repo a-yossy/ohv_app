@@ -44,4 +44,13 @@ RSpec.describe Live, type: :model do
       it { is_expected.to be_of_kind(:start_hour, "はOPEN以降の時間を設定して下さい") }
     end
   end
+
+  describe "recently_live_date" do
+    let!(:new_live) { create(:live, start_time: "2021/01/02") }
+    let!(:old_live) { create(:live, start_time: "2021/01/01") }
+
+    it do
+      expect(described_class.recently_live_date.to_a).to eq [new_live, old_live]
+    end
+  end
 end
