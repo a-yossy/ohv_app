@@ -9,14 +9,13 @@
       - @filter_lives.each do |live|
         .accordion-container
           .accordion-title.js-accordion-title
-            p[style="text-align: left"]
-              small
-                = live.start_time.strftime("%Y.%m.%d %a")
-                |  /
-                = live.place
-              br
-              b
-                = live.title
+            small
+              = live.start_time.strftime("%Y.%m.%d %a")
+              |  /
+              = live.place
+            br
+            b
+              = live.title
           .accordion-content
             = simple_format(live.detail)
             |  OPEN
