@@ -4,7 +4,7 @@ class LivePagesController < ApplicationController
   def show
     @date = params[:live_date]
     @filter_lives = if @date.blank?
-                      Live.recently_live_date
+                      Live.recently_live_date.first(5)
                     else
                       Live.where(start_time: @date.in_time_zone.all_month)
                     end
