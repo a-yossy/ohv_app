@@ -3,7 +3,7 @@
     .col-md-3
       = form_tag(live_page_path, method: :get, remote: true) do
         = select_tag(:live_date,
-                options_for_select(@live_date_list, date),
+                options_for_select(@live_date_list, @date),
                 class: "select-drop")
     .col-md-9
       - @filter_lives.each do |live|

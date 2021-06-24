@@ -2,21 +2,9 @@
 
 class LivePagesController < ApplicationController
   def show
-    @date = params[:live_date]
-    @filter_lives = if @date.blank?
-                      Live.recently_held_live.first(5)
-                    else
-                      Live.where(start_time: @date.in_time_zone.all_month)
-                    end
+    @date = params[:live_date]&.in_time_zone&.all_month || (-Float::INFINITY..Float::INFINITY)
+    @filter_lives = Live.where(start_time: @date).recently_held_live
 
-    @live_date_list = [["recent live", ""]]
-    lives = Live.recently_held_live
-    lives.each do |live|
-      view_date = live.start_time.strftime("%Y-%m")
-      filter_date = "#{view_date}-01"
-      if @live_date_list.exclude?([view_date, filter_date])
-        @live_date_list.push([view_date, filter_date])
-      end
-    end
+    @live_date_list = LiveDateViewObject.live_dates
   end
 end
