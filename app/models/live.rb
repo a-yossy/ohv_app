@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Live < ApplicationRecord
-  scope :recently_live_date, -> { order(start_time: :desc) }
+  scope :recently_held_live, -> { order(start_time: :desc) }
   validates :place, presence: true
   validates :title, presence: true
   validates :detail, presence: true

@@ -45,12 +45,12 @@ RSpec.describe Live, type: :model do
     end
   end
 
-  describe "recently_live_date" do
+  describe "recently_held_live" do
     let!(:new_live) { create(:live, start_time: "2021/01/02") }
     let!(:old_live) { create(:live, start_time: "2021/01/01") }
 
     it do
-      expect(described_class.recently_live_date.to_a).to eq [new_live, old_live]
+      expect(described_class.recently_held_live.to_a).to eq [new_live, old_live]
     end
   end
 end
