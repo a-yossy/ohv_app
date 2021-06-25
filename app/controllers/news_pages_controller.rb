@@ -2,7 +2,7 @@
 
 class NewsPagesController < ApplicationController
   def index
-    @informations = Information.recently_announced_at
+    @informations = Information.recently_announced_at.page(params[:page]).per(5)
   end
 
   def show
