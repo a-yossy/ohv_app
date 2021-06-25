@@ -53,4 +53,12 @@ RSpec.describe Live, type: :model do
       expect(described_class.recently_held_live.to_a).to eq [new_live, old_live]
     end
   end
+
+  describe "live_dates" do
+    let!(:live_first) { create(:live) }
+
+    it do
+      expect(LiveDateViewObject.live_dates).to include [live_first.start_time.strftime("%Y-%m"), live_first.start_time.in_time_zone.all_month]
+    end
+  end
 end
