@@ -1,0 +1,32 @@
+.container
+  .row
+    .col-md-3
+      = form_tag(live_page_path, method: :get, remote: true) do
+        = select_tag(:live_date,
+                options_for_select(@live_date_list, @date),
+                class: "select-drop")
+    .col-md-9
+      - @filter_lives.each do |live|
+        .accordion-container
+          .accordion-title.js-accordion-title
+            small
+              = live.start_time.strftime("%Y.%m.%d %a")
+              |  /
+              = live.place
+            br
+            b
+              = live.title
+          .accordion-content
+            = simple_format(live.detail)
+            |  OPEN
+            = live.open_hour.strftime("%H:%M")
+            | /START
+            = live.start_hour.strftime("%H:%M")
+            br
+            |  ADV¥
+            = live.advance_ticket_price
+            | /DOOR¥
+            = live.doors_ticket_price
+            |  +1DRINK
+    = paginate @filter_lives
+= javascript_pack_tag 'live_pages/accordion'

@@ -54,6 +54,23 @@ Live.create(place: "@福井CHOP",
             detail: "act/ totalfeedback, ROLENT, The AshRay",
             open_hour: "2020/08/29 18:00", start_hour: "2020/08/29 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
             start_time: "2020/08/29")
+Live.create(place: "@福井CHOP",
+            title: "NO TITLE",
+            detail: "act/ A.W.O.L., The AshRay, WHITE ASTER,
+                    -DJ- ヒナ。(totalfeedback)",
+            open_hour: "2020/12/19 18:30", start_hour: "2020/12/19 19:00", advance_ticket_price: 2000, doors_ticket_price: 2500,
+            start_time: "2020/12/19")
+Live.create(place: "@金沢vanvanV4",
+            title: "-Year End LIVE 2020-",
+            detail: "act/ OTAKU Top-Value, midway. Re:PerCussiOn,
+                    パニカント3, 北野拓海, 大盛り牛丼, Robin",
+            open_hour: "2020/12/28 16:00", start_hour: "2020/12/28 16:30", advance_ticket_price: 1000, doors_ticket_price: 1000,
+            start_time: "2020/12/28")
+Live.create(place: "@福井CHOP",
+            title: "コレが本当のマッスルビート vol.2",
+            detail: "act/ A.W.O.L., The AshRay, HEARTBURNER",
+            open_hour: "2021/02/27 18:00", start_hour: "2021/02/27 18:30", advance_ticket_price: 2000, doors_ticket_price: 2500,
+            start_time: "2021/02/27")
 Live.create(place: "@金沢vanvanV4",
             title: "bacho群雨TOUR",
             detail: "act/ bacho, mother, alley",
