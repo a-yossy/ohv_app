@@ -1,2 +1,20 @@
 .inner_top
-  = image_tag "ohv.jpg", :height =>  '700'
+  = image_tag "ohv.jpg", :width =>  '1200'
+
+.inner_top
+  .top_news_index_string
+    | LATEST NEWS
+  - @informations.each do |information|
+    .inner_top_news_index
+      = link_to news_page_path(information) do
+        = image_tag information.picture, :height => '300'
+        br
+        .string_news_index
+          b
+            = information.title
+          br
+          = information.announcement_date.strftime("%Y.%m.%d")
+  .inner_top_twitter
+    a.twitter-timeline[data-lang="ja" data-width="500" data-height="370" data-theme="light" data-chrome="transparent nofooter noheader" href="https://twitter.com/OutsideHer_jp?ref_src=twsrc%5Etfw"]
+      | Tweets by OutsideHer_jp
+    script[async src="https://platform.twitter.com/widgets.js" charset="utf-8"]
