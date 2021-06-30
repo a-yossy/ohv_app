@@ -15,3 +15,6 @@ header.navbar.navbar-fixed-top.navbar-inverse
           = link_to "VIDEOS",  video_page_path
         li
           = link_to "CONTACT", new_contact_page_path
+        - if admin_signed_in?
+          li
+            = link_to "LOGOUT", destroy_admin_session_path, method: :delete

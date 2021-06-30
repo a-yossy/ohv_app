@@ -7,7 +7,7 @@ ruby "2.7.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "bootstrap-sass"
-gem 'devise'
+gem "devise"
 gem "dotenv-rails"
 gem "font-awesome-sass"
 gem "html2slim"

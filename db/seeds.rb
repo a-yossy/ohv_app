@@ -139,6 +139,6 @@ Video.create(title: "揺るがない距離は今 - 2nd single", release_date: "2
 
 # Adminモデルの初期データ
 Admin.create!(
-  email: 'admin@admin',
-  password: 'testtest'
+  email: ENV["TOMAIL"],
+  password: ENV["ADMIN_PASSWORD"]
 )
