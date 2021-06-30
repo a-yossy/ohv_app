@@ -117,6 +117,17 @@ footer ul li {
   }
 }
 
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  margin-bottom: 15px;
+}
+
+input {
+  height: auto !important;
+}
+
 .inner_top{
   margin: 25px auto;
   max-width: 1200px;

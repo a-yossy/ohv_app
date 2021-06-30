@@ -1,7 +1,7 @@
-- if @contact.errors.any?
+- if object.errors.any?
   #error_explanation
     ul
-      - @contact.errors.full_messages.each do |msg|
+      - object.errors.full_messages.each do |msg|
         li
           p[style="text-align: left"]
             = msg

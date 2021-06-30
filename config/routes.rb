@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resource :live_page, only: %i[show]
   resource :contact_page, only: %i[new create]
   resources :cd_pages, only: %i[index show]
-  resources :news_pages, only: %i[index show]
+  resources :news_pages
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }
