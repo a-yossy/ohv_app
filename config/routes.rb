@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   resource :contact_page, only: %i[new create]
   resources :cd_pages, only: %i[index show]
   resources :news_pages, only: %i[index show]
+  devise_for :admins, controllers: {
+    sessions: 'admins/sessions'
+  }
 end
