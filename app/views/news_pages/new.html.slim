@@ -7,15 +7,16 @@
         = f.label :title
         = f.text_field :title, class: 'form-control'
 
-        = f.label :announcement_date, "Announcement_date(20xx-xx-xx)"
+        = f.label :announcement_date, "告知日(20xx-xx-xx)"
         = f.text_field :announcement_date, class: 'form-control'
 
         = f.label :content
         = f.text_area :content, class: 'form-control'
 
-        = f.label :priority, "Priority(0…日付順に表示、1…一番上に表示)"
+        = f.label :priority, "優先度(0…日付順に表示、1…一番上に表示)"
         = f.text_field :priority, class: 'form-control'
 
+        = f.label :picture
         = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
 
         = f.submit "作成する", class: "btn btn-primary"

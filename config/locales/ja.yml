@@ -5,3 +5,9 @@ ja:
         name: "お名前"
         email: "メールアドレス"
         content: "問い合わせ内容"
+      information:
+        title: "タイトル"
+        picture: "写真"
+        announcement_date: "告知日"
+        content: "内容"
+        priority: "優先度"
