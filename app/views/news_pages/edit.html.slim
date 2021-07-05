@@ -16,7 +16,6 @@
         = f.label :priority, "Priority(0…日付順に表示、1…一番上に表示)"
         = f.text_field :priority, class: 'form-control'
 
-        = f.submit "作成する", class: "btn btn-primary"
+        = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
 
-        span.picture
-          = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
+        = f.submit "作成する", class: "btn btn-primary"
