@@ -14,7 +14,7 @@ class Information < ApplicationRecord
 
   def picture_size
     if picture.size > 5.megabytes
-      errors.add(:picture, "Pictureは5MBより小さくして下さい")
+      errors.add(:picture, "は5MBより小さくして下さい")
     end
   end
 end
