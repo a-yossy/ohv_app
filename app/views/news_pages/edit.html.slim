@@ -14,7 +14,7 @@
         = f.text_area :content, class: 'form-control'
 
         = f.label :priority, "優先度(0…日付順に表示、1…一番上に表示)"
-        = f.text_field :priority, class: 'form-control'
+        = f.select :priority, [[0,0], [1, 1]] , class: 'form-control'
 
         = f.label :picture
         = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
