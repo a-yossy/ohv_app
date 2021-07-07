@@ -39,9 +39,11 @@ RSpec.describe NewsPagesController, type: :request do
   end
 
   describe "#create" do
-    let(:picture_path) { File.join(Rails.root, 'spec/fixtures/test.jpg') }
+    let(:picture_path) { File.join(Rails.root, "spec/fixtures/test.jpg") }
     let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
-    subject { post news_pages_path, params: { information: { title: "title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } } }
+    subject {
+      post news_pages_path, params: { information: { title: "title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
+    }
 
     context "when user logs in" do
       let(:admin) { create(:admin) }
@@ -51,7 +53,7 @@ RSpec.describe NewsPagesController, type: :request do
 
         expect { subject }.to change(Information, :count).by(1)
         expect(response).to redirect_to news_page_path(1)
-        expect(flash[:success]).to eq '作成しました'
+        expect(flash[:success]).to eq "作成しました"
       end
     end
 
@@ -85,7 +87,7 @@ RSpec.describe NewsPagesController, type: :request do
   end
 
   describe "#update" do
-    let(:picture_path) { File.join(Rails.root, 'spec/fixtures/test.jpg') }
+    let(:picture_path) { File.join(Rails.root, "spec/fixtures/test.jpg") }
     let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
     let(:information) { create(:information, title: "old_title") }
 
@@ -94,7 +96,8 @@ RSpec.describe NewsPagesController, type: :request do
 
       it do
         login_as(admin)
-        put news_page_path(information), params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
+        put news_page_path(information),
+            params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
         expect(information.reload.title).to eq "new_title"
         expect(request).to redirect_to news_page_path(information)
         expect(flash[:success]).to eq "更新しました"
@@ -103,7 +106,8 @@ RSpec.describe NewsPagesController, type: :request do
 
     context "when user does not log in" do
       it do
-        put news_page_path(information), params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
+        put news_page_path(information),
+            params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
         expect(information.reload.title).not_to eq "new_title"
         expect(response).to redirect_to new_admin_session_path
       end
