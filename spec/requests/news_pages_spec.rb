@@ -109,4 +109,27 @@ RSpec.describe NewsPagesController, type: :request do
       end
     end
   end
+
+  describe "#destroy" do
+    let!(:information) { create(:information) }
+    subject { delete news_page_path information }
+
+    context "when user logs in" do
+      let(:admin) { create(:admin) }
+
+      it do
+        login_as(admin)
+        expect { subject }.to change(Information, :count).by(-1)
+        expect(response).to redirect_to news_pages_path
+        expect(flash[:success]).to eq "削除しました"
+      end
+    end
+
+    context "when user does not log in" do
+      it do
+        expect { subject }.to change(Information, :count).by(0)
+        expect(response).to redirect_to new_admin_session_path
+      end
+    end
+  end
 end
