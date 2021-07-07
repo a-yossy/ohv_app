@@ -11,7 +11,7 @@ RSpec.describe NewsPagesController, type: :request do
   end
 
   describe "#show" do
-    let!(:information) { create(:information, picture: "1st demo.jpg") }
+    let!(:information) { create(:information) }
 
     it do
       get news_page_path(information)
