@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class NewsPagesController < ApplicationController
-  before_action :authenticate_admin!, only: %i[new create edit destroy]
+  before_action :authenticate_admin!, only: %i[new create edit update destroy]
 
   def index
     @informations = Information.recently_announced_at.page(params[:page]).per(5)
