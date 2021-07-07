@@ -37,4 +37,25 @@ RSpec.describe NewsPagesController, type: :request do
       end
     end
   end
+
+  describe "#edit" do
+    let(:information) { create(:information) }
+
+    context "when user logs in" do
+      let(:admin) { create(:admin) }
+
+      it do
+        login_as(admin)
+        get edit_news_page_path(information)
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context "when user does not log in" do
+      it do
+        get edit_news_page_path(information)
+        expect(response).to redirect_to new_admin_session_path
+      end
+    end
+  end
 end
