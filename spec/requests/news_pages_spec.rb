@@ -52,7 +52,7 @@ RSpec.describe NewsPagesController, type: :request do
         login_as(admin)
 
         expect { subject }.to change(Information, :count).by(1)
-        expect(response).to redirect_to news_page_path(1)
+        expect(response).to redirect_to news_page_path(Information.first)
         expect(flash[:success]).to eq "作成しました"
       end
     end
