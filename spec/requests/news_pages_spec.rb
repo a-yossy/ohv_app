@@ -96,7 +96,7 @@ RSpec.describe NewsPagesController, type: :request do
 
       it do
         put news_page_path(information),
-            params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
+            params: { information: { title: "new_title" } }
         expect(information.reload.title).to eq "new_title"
         expect(request).to redirect_to news_page_path(information)
         expect(flash[:success]).to eq "更新しました"
