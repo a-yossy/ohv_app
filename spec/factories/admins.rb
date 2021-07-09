@@ -2,7 +2,7 @@
 
 FactoryBot.define do
   factory :admin do
-    email { ENV["TOMAIL"] }
-    password { ENV["ADMIN_PASSWORD"] }
+    email { 'admin@email.com' }
+    password { 'password' }
   end
 end
