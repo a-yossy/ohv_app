@@ -22,9 +22,9 @@ RSpec.describe NewsPagesController, type: :request do
   describe "#new" do
     context "when user logs in" do
       let(:admin) { create(:admin) }
+      before { login_as(admin) }
 
       it do
-        login_as(admin)
         get new_news_page_path
         expect(response).to have_http_status(200)
       end
@@ -47,10 +47,9 @@ RSpec.describe NewsPagesController, type: :request do
 
     context "when user logs in" do
       let(:admin) { create(:admin) }
+      before { login_as(admin) }
 
       it do
-        login_as(admin)
-
         expect { subject }.to change(Information, :count).by(1)
         expect(response).to redirect_to news_page_path(Information.first)
         expect(flash[:success]).to eq "作成しました"
@@ -70,9 +69,9 @@ RSpec.describe NewsPagesController, type: :request do
 
     context "when user logs in" do
       let(:admin) { create(:admin) }
+      before { login_as(admin) }
 
       it do
-        login_as(admin)
         get edit_news_page_path(information)
         expect(response).to have_http_status(200)
       end
@@ -93,9 +92,9 @@ RSpec.describe NewsPagesController, type: :request do
 
     context "when user logs in" do
       let(:admin) { create(:admin) }
+      before { login_as(admin) }
 
       it do
-        login_as(admin)
         put news_page_path(information),
             params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
         expect(information.reload.title).to eq "new_title"
@@ -120,9 +119,9 @@ RSpec.describe NewsPagesController, type: :request do
 
     context "when user logs in" do
       let(:admin) { create(:admin) }
+      before { login_as(admin) }
 
       it do
-        login_as(admin)
         expect { subject }.to change(Information, :count).by(-1)
         expect(response).to redirect_to news_pages_path
         expect(flash[:success]).to eq "削除しました"
