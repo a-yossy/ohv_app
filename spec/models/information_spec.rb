@@ -37,14 +37,14 @@ RSpec.describe Information, type: :model do
       let(:picture_path) { File.join(Rails.root, "spec/fixtures/size_test.jpg") }
       let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
 
-      it { is_expected.to be_of_kind(:picture, "は5MBより小さくして下さい") }
+      it { is_expected.to be_of_kind(:picture, :should_be_smaller_than_5MB) }
     end
 
     context "with small picture" do
       let(:picture_path) { File.join(Rails.root, "spec/fixtures/test.jpg") }
       let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
 
-      it { is_expected.not_to be_of_kind(:information, "は5MBより小さくして下さい") }
+      it { is_expected.not_to be_of_kind(:information, :should_be_smaller_than_5MB) }
     end
   end
 end
