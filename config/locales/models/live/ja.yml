@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    attributes:
+      information:
+        title: "タイトル"
+        picture: "写真"
+        announcement_date: "告知日"
+        content: "内容"
+        priority: "優先度"
+    errors:
+      models:
+        information:
+          attributes:
+            picture:
+              should_be_smaller_than_5MB: "は5MBより小さくして下さい"
