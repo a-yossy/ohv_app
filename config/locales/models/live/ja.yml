@@ -1,5 +1,15 @@
 ja:
   activerecord:
+    attributes:
+      live:
+        place: "場所"
+        title: "タイトル"
+        detail: "詳細"
+        open_hour: "開場時間"
+        start_hour: "開演時間"
+        advance_ticket_price: "前売価格"
+        doors_ticket_price: "当日価格"
+        start_time: "日付"
     errors:
       models:
         live:
