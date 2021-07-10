@@ -17,6 +17,6 @@ class Live < ApplicationRecord
   def open_hour_should_be_earlier_than_start_hour
     return if open_hour < start_hour
 
-    errors.add(:start_hour, :should_be_earlier_than_start_hour)
+    errors.add(:start_hour, :should_be_earlier_than_open_hour)
   end
 end
