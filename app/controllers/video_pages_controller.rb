@@ -12,7 +12,7 @@ class VideoPagesController < ApplicationController
     url = params[:video][:url]
     @video.url = "https://www.youtube.com/embed/#{url.last(11)}"
     if @video.save
-      flash[:success] = t '.success'
+      flash[:success] = t ".success"
       redirect_to action: :index
     else
       render :new
@@ -32,7 +32,7 @@ class VideoPagesController < ApplicationController
     url = params[:video][:url]
     @video.url = "https://www.youtube.com/embed/#{url.last(11)}"
     if @video.update(video_params)
-      flash[:success] = t '.success'
+      flash[:success] = t ".success"
       redirect_to action: :index
     else
       render :edit
@@ -41,7 +41,7 @@ class VideoPagesController < ApplicationController
 
   def destroy
     Video.find_by(id: params[:id]).destroy
-    flash[:success] = t '.success'
+    flash[:success] = t ".success"
     redirect_to action: :index
   end
 
