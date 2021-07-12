@@ -10,13 +10,13 @@ class VideoPagesController < ApplicationController
     url = params[:video][:url]
     @video.url = "https://www.youtube.com/embed/#{url.last(11)}"
     if @video.save
-      redirect_to action: :show
+      redirect_to action: :index
     else
       render :new
     end
   end
 
-  def show
+  def index
     @videos = Video.recently_released_at
   end
 
@@ -29,7 +29,7 @@ class VideoPagesController < ApplicationController
     url = params[:video][:url]
     @video.url = "https://www.youtube.com/embed/#{url.last(11)}"
     if @video.update(video_params)
-      redirect_to action: :show
+      redirect_to action: :index
     else
       render :edit
     end
