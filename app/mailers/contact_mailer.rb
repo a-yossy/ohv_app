@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ContactMailer < ApplicationMailer
-  # Subject can be set in your I18n file at config/locales/en.yml
+  # Subject can be set in your I18n file at config/locales/ja.yml
   # with the following lookup:
   #
   #   en.contact_mailer.confirm_inquiry.subject
