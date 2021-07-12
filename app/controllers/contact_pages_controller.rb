@@ -9,7 +9,7 @@ class ContactPagesController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       @contact.send_contact_email
-      flash[:info] = "メールが送信されました"
+      flash[:info] = t '.info'
       redirect_to root_url
     else
       render :new
