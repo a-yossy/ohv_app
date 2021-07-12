@@ -8,3 +8,6 @@
       - if admin_signed_in?
         br
         = link_to "編集", edit_video_page_path(video)
+        |  /
+        = "\r"
+        = link_to "削除", video_page_path(video), method: :delete, data: { confirm: "本当に消しますか？" }

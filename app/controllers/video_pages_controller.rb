@@ -35,6 +35,11 @@ class VideoPagesController < ApplicationController
     end
   end
 
+  def destroy
+    Video.find_by(id: params[:id]).destroy
+    redirect_to action: :index
+  end
+
   private
 
   def video_params
