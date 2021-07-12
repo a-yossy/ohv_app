@@ -18,7 +18,7 @@ class NewsPagesController < ApplicationController
   def create
     @information = Information.new(information_params)
     if @information.save
-      flash[:success] = t '.success'
+      flash[:success] = t ".success"
       redirect_to action: :show, id: @information.id
     else
       render :new
@@ -32,7 +32,7 @@ class NewsPagesController < ApplicationController
   def update
     @information = Information.find_by(id: params[:id])
     if @information.update(information_params)
-      flash[:success] = t '.success'
+      flash[:success] = t ".success"
       redirect_to action: :show, id: @information.id
     else
       render :edit
@@ -41,7 +41,7 @@ class NewsPagesController < ApplicationController
 
   def destroy
     Information.find_by(id: params[:id]).destroy
-    flash[:success] = t '.success'
+    flash[:success] = t ".success"
     redirect_to action: :index
   end
 

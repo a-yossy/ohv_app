@@ -16,7 +16,7 @@ RSpec.describe ContactPagesController, type: :request do
     it do
       expect { subject }.to change(Contact, :count).by(1)
       expect(response).to redirect_to root_path
-      expect(flash[:info]).to eq I18n.t 'contact_pages.create.info'
+      expect(flash[:info]).to eq I18n.t "contact_pages.create.info"
     end
   end
 end

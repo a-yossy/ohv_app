@@ -52,7 +52,7 @@ RSpec.describe NewsPagesController, type: :request do
       it do
         expect { subject }.to change(Information, :count).by(1)
         expect(response).to redirect_to news_page_path(Information.first)
-        expect(flash[:success]).to eq I18n.t 'news_pages.create.success'
+        expect(flash[:success]).to eq I18n.t "news_pages.create.success"
       end
     end
 
@@ -99,7 +99,7 @@ RSpec.describe NewsPagesController, type: :request do
             params: { information: { title: "new_title" } }
         expect(information.reload.title).to eq "new_title"
         expect(request).to redirect_to news_page_path(information)
-        expect(flash[:success]).to eq I18n.t 'news_pages.update.success'
+        expect(flash[:success]).to eq I18n.t "news_pages.update.success"
       end
     end
 
@@ -124,7 +124,7 @@ RSpec.describe NewsPagesController, type: :request do
       it do
         expect { subject }.to change(Information, :count).by(-1)
         expect(response).to redirect_to news_pages_path
-        expect(flash[:success]).to eq I18n.t 'news_pages.destroy.success'
+        expect(flash[:success]).to eq I18n.t "news_pages.destroy.success"
       end
     end
 
