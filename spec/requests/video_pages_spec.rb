@@ -97,4 +97,27 @@ RSpec.describe VideoPagesController, type: :request do
       end
     end
   end
+
+  describe "#destroy" do
+    let!(:video) { create(:video) }
+    subject { delete video_page_path video }
+
+    context "when user logs in" do
+      let(:admin) { create(:admin) }
+      before { login_as(admin) }
+
+      it do
+        expect { subject }.to change(Video, :count).by(-1)
+        expect(response).to redirect_to video_pages_path
+        expect(flash[:success]).to eq I18n.t "video_pages.destroy.success"
+      end
+    end
+
+    context "when user does not log in" do
+      it do
+        expect { subject }.to change(Video, :count).by(0)
+        expect(response).to redirect_to new_admin_session_path
+      end
+    end
+  end
 end
