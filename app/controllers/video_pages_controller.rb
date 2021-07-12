@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class VideoPagesController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create edit update destroy]
+
   def new
     @video = Video.new
   end
