@@ -35,13 +35,13 @@ RSpec.describe Live, type: :model do
     context "when open hour is earlier than start hour" do
       let(:start_hour) { "2021/01/01 18:30" }
 
-      it { is_expected.not_to be_of_kind(:start_hour, "はOPEN以降の時間を設定して下さい") }
+      it { is_expected.not_to be_of_kind(:start_hour, :should_be_earlier_than_open_hour) }
     end
 
     context "when open hour is not earlier than start hour" do
       let(:start_hour) { "2021/01/01 17:30" }
 
-      it { is_expected.to be_of_kind(:start_hour, "はOPEN以降の時間を設定して下さい") }
+      it { is_expected.to be_of_kind(:start_hour, :should_be_earlier_than_open_hour) }
     end
   end
 

@@ -13,6 +13,7 @@ module OhvApp
     config.load_defaults 6.1
     config.generators.template_engine = :slim
     config.i18n.default_locale = :ja
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}').to_s]
     config.generators do |g|  # ここから追記
       g.assets false          # CSS, JavaScriptファイル生成せず
       g.skip_routes true      # trueならroutes.rb変更せず、falseなら通常通り変更

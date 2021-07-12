@@ -24,4 +24,27 @@ RSpec.describe Information, type: :model do
       expect(described_class.recently_announced_at.to_a).to eq [new_information, old_information]
     end
   end
+
+  describe "picture_size" do
+    let(:information) { build(:information, picture: picture) }
+
+    subject do
+      information.valid?
+      information.errors
+    end
+
+    context "with big picture" do
+      let(:picture_path) { File.join(Rails.root, "spec/fixtures/size_test.jpg") }
+      let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
+
+      it { is_expected.to be_of_kind(:picture, :should_be_smaller_than_5MB) }
+    end
+
+    context "with small picture" do
+      let(:picture_path) { File.join(Rails.root, "spec/fixtures/test.jpg") }
+      let(:picture) { Rack::Test::UploadedFile.new(picture_path) }
+
+      it { is_expected.not_to be_of_kind(:information, :should_be_smaller_than_5MB) }
+    end
+  end
 end

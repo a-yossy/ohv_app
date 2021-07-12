@@ -1,7 +1,0 @@
-ja:
-  activerecord:
-    attributes:
-      contact:
-        name: "お名前"
-        email: "メールアドレス"
-        content: "問い合わせ内容"

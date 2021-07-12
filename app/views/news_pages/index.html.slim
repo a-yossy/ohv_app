@@ -1,12 +1,19 @@
 .inner_top
+  - if admin_signed_in?
+    = link_to "新しいデータを作成", new_news_page_path
   - @informations.each do |information|
     .inner_news_index
       = link_to news_page_path(information) do
-        = image_tag information.picture, :height => '400'
+        = image_tag information.picture.url, :height => '400'
         br
         .string_news_index
           b
             = information.title
           br
           = information.announcement_date.strftime("%Y.%m.%d")
+    - if admin_signed_in?
+      = link_to "編集", edit_news_page_path(information)
+      |  /
+      = "\r"
+      = link_to "削除", news_page_path(information), method: :delete, data: { confirm: "本当に消しますか？" }
 = paginate @informations

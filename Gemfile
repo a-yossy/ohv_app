@@ -7,11 +7,13 @@ ruby "2.7.3"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem "bootstrap-sass"
+gem "carrierwave"
 gem "devise"
 gem "dotenv-rails"
 gem "font-awesome-sass"
 gem "html2slim"
 gem "kaminari"
+gem "mini_magick"
 gem "rails", "~> 6.1.3", ">= 6.1.3.2"
 gem "rails-i18n"
 gem "simple_calendar", "~> 2.0"
@@ -68,6 +70,7 @@ group :test do
 end
 
 group :production do
+  gem "fog"
   gem "pg"
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

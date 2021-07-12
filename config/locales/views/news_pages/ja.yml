@@ -1,0 +1,8 @@
+ja:
+  news_pages:
+    create:
+      success: "作成しました"
+    update:
+      success: "更新しました"
+    destroy:
+      success: "削除しました"
