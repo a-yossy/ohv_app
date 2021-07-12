@@ -9,9 +9,8 @@ class VideoPagesController < ApplicationController
 
   def create
     @video = Video.new(video_params)
-    url = params[:video][:url]
-    @video.url = "https://www.youtube.com/embed/#{url.last(11)}"
-    if @video.save
+    video_form_object = VideoFormObject.new(video_model: @video, url: params[:video][:url])
+    if video_form_object.execute
       flash[:success] = t ".success"
       redirect_to action: :index
     else
