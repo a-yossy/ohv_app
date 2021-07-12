@@ -1,0 +1,7 @@
+ja:
+  activerecord:
+    attributes:
+      video:
+        title: "タイトル"
+        url: "url"
+        release_date: "公開日"

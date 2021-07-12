@@ -1,0 +1,13 @@
+.inner_video
+  - if admin_signed_in?
+    = link_to "新しいデータを作成", new_video_page_path
+  - @videos.each do |video|
+    iframe[width="560" height="315" src=video.url title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen]
+    p.text-left
+      = video.title
+      - if admin_signed_in?
+        br
+        = link_to "編集", edit_video_page_path(video)
+        |  /
+        = "\r"
+        = link_to "削除", video_page_path(video), method: :delete, data: { confirm: "本当に消しますか？" }
