@@ -17,6 +17,7 @@ class LivePagesController < ApplicationController
   def create
     @live = Live.new(live_params)
     if @live.save
+      flash[:success] = t '.success'
       redirect_to action: :index
     else
       render :new
@@ -30,6 +31,7 @@ class LivePagesController < ApplicationController
   def update
     @live = Live.find_by(id: params[:id])
     if @live.update(live_params)
+      flash[:success] = t '.success'
       redirect_to action: :index
     else
       render :edit
@@ -38,6 +40,7 @@ class LivePagesController < ApplicationController
 
   def destroy
     Live.find_by(id: params[:id]).destroy
+    flash[:success] = t '.success'
     redirect_to action: :index
   end
 
