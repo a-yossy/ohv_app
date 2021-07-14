@@ -29,5 +29,7 @@
             | /DOOR¥
             = live.doors_ticket_price
             |  +1DRINK
+        - if admin_signed_in?
+          = link_to "編集", edit_live_page_path(live)
     = paginate @filter_lives
 = javascript_pack_tag 'live_pages/accordion'

@@ -21,6 +21,19 @@ class LivePagesController < ApplicationController
     end
   end
 
+  def edit
+    @live = Live.find_by(id: params[:id])
+  end
+
+  def update
+    @live = Live.find_by(id: params[:id])
+    if @live.update(live_params)
+      redirect_to action: :index
+    else
+      render :edit
+    end
+  end
+
   private
 
   def live_params
