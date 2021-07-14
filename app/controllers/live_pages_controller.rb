@@ -34,6 +34,11 @@ class LivePagesController < ApplicationController
     end
   end
 
+  def destroy
+    Live.find_by(id: params[:id]).destroy
+    redirect_to action: :index
+  end
+
   private
 
   def live_params

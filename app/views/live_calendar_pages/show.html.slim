@@ -35,6 +35,9 @@
             | close
       - if admin_signed_in?
         = link_to "編集", edit_live_page_path(live)
+        |  /
+        = "\r"
+        = link_to "削除", live_page_path(live), method: :delete, data: { confirm: "本当に消しますか？" }
   p[style="text-align: right"]
     = link_to live_pages_path do
       i.class.fas.fa-list

@@ -31,5 +31,8 @@
             |  +1DRINK
         - if admin_signed_in?
           = link_to "編集", edit_live_page_path(live)
+          |  /
+          = "\r"
+          = link_to "削除", live_page_path(live), method: :delete, data: { confirm: "本当に消しますか？" }
     = paginate @filter_lives
 = javascript_pack_tag 'live_pages/accordion'
