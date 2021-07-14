@@ -54,4 +54,25 @@ RSpec.describe LivePagesController, type: :request do
       end
     end
   end
+
+  describe "#edit" do
+    let(:live) { create(:live) }
+
+    context "when user logs in" do
+      let(:admin) { create(:admin) }
+      before { login_as(admin) }
+
+      it do
+        get edit_live_page_path(live)
+        expect(response).to have_http_status(200)
+      end
+    end
+
+    context "when user does not log in" do
+      it do
+        get edit_live_page_path(live)
+        expect(response).to redirect_to new_admin_session_path
+      end
+    end
+  end
 end
