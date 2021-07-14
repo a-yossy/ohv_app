@@ -27,4 +27,3 @@ class VideoFormObject
     "https://www.youtube.com/embed/#{url.last(11)}"
   end
 end
-
