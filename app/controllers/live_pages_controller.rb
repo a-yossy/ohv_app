@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class LivePagesController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create edit update destroy]
+
   def index
     @date = params[:live_date]&.in_time_zone&.all_month || (-Float::INFINITY..Float::INFINITY)
     @filter_lives = Live.where(start_time: @date).recently_held_live.page(params[:page]).per(5)
