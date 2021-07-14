@@ -1,3 +1,5 @@
 .inner_top
+  - if admin_signed_in?
+    = link_to "新しいデータを作成", new_live_page_path
   = render 'filter'
 = javascript_pack_tag 'live_pages/custom'

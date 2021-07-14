@@ -1,4 +1,6 @@
 .inner_bio
+  - if admin_signed_in?
+    = link_to "新しいデータを作成", new_live_page_path
   = month_calendar events: @lives do |date, lives|
     = date.day
     - lives.each do |live|
