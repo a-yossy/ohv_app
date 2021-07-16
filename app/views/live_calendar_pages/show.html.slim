@@ -1,4 +1,6 @@
 .inner_bio
+  - if admin_signed_in?
+    = link_to "新しいデータを作成", new_live_page_path
   = month_calendar events: @lives do |date, lives|
     = date.day
     - lives.each do |live|
@@ -31,8 +33,13 @@
           br
           a.js-modal-close[href=""]
             | close
+      - if admin_signed_in?
+        = link_to "編集", edit_live_page_path(live)
+        |  /
+        = "\r"
+        = link_to "削除", live_page_path(live), method: :delete, data: { confirm: "本当に消しますか？" }
   p[style="text-align: right"]
-    = link_to live_page_path do
+    = link_to live_pages_path do
       i.class.fas.fa-list
       | ライブ一覧はこちら
 = javascript_pack_tag 'live_calendar_pages/modal'

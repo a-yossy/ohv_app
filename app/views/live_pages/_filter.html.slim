@@ -1,7 +1,7 @@
 .container
   .row
     .col-md-3
-      = form_tag(live_page_path, method: :get, remote: true) do
+      = form_tag(live_pages_path, method: :get, remote: true) do
         = select_tag(:live_date,
                 options_for_select(@live_date_list, @date),
                 class: "select-drop")
@@ -29,5 +29,10 @@
             | /DOOR¥
             = live.doors_ticket_price
             |  +1DRINK
+        - if admin_signed_in?
+          = link_to "編集", edit_live_page_path(live)
+          |  /
+          = "\r"
+          = link_to "削除", live_page_path(live), method: :delete, data: { confirm: "本当に消しますか？" }
     = paginate @filter_lives
 = javascript_pack_tag 'live_pages/accordion'

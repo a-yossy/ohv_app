@@ -106,7 +106,7 @@ RSpec.describe NewsPagesController, type: :request do
     context "when user does not log in" do
       it do
         put news_page_path(information),
-            params: { information: { title: "new_title", picture: picture, announcement_date: "2021-01-01", content: "content", priority: 0 } }
+            params: { information: { title: "new_title" } }
         expect(information.reload.title).not_to eq "new_title"
         expect(response).to redirect_to new_admin_session_path
       end
