@@ -14,30 +14,20 @@ class CdFormObject
   attribute :name
   attribute :track_number
 
-  validates :format, presence: true
-  validates :picture, presence: true
-  validates :title, presence: true
-  validates :release_date, presence: true
-  validates :price, presence: true
-  validates :url, presence: true
-  validates :name, presence: true
-  validates :track_number, presence: true
-
   def execute
-    return false unless valid?
-
-    save
+    save!
   end
 
-  def save
+  def save!
     ActiveRecord::Base.transaction do
       cd = Cd.new(format: format, picture: picture, title: title, release_date: release_date, price: price, url: url)
-      cd.save
+      cd.save!
       song = cd.songs.build(name: name, track_number: track_number)
-      song.save
+      song.save!
     end
-      return true
-    rescue => e
-      return false
+    true
+  rescue => e
+    errors.add(:base, e.message.split(','))
+    false
   end
 end
