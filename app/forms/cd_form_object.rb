@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CdFormObject
   include ActiveModel::Model
   include ActiveModel::Attributes
@@ -26,8 +28,8 @@ class CdFormObject
       song.save!
     end
     true
-  rescue => e
-    errors.add(:base, e.message.split(','))
+  rescue StandardError => e
+    errors.add(:base, e.message.split(","))
     false
   end
 end
