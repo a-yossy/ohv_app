@@ -22,10 +22,12 @@
         = f.label :url
         = f.text_field :url, class: 'form-control'
 
-        = f.label :name
-        = f.text_field :name, class: 'form-control'
+        = f.fields_for :songs do |song|
 
-        = f.label :track_number
-        = f.number_field :track_number, class: 'form-control'
+          = song.label :name
+          = song.text_field :name, class: 'form-control'
+
+          = song.label :track_number
+          = song.number_field :track_number, class: 'form-control'
 
         = f.submit "作成する", class: "btn btn-primary"

@@ -13,8 +13,7 @@ class CdFormObject
   attribute :release_date
   attribute :price
   attribute :url
-  attribute :name
-  attribute :track_number
+  attribute :songs
 
   def execute
     save!
@@ -24,7 +23,7 @@ class CdFormObject
     ActiveRecord::Base.transaction do
       cd = Cd.new(format: format, picture: picture, title: title, release_date: release_date, price: price, url: url)
       cd.save!
-      song = cd.songs.build(name: name, track_number: track_number)
+      song = cd.songs.build(songs)
       song.save!
     end
     true
