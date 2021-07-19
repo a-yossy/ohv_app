@@ -14,8 +14,13 @@ class CdFormObject
   attribute :price
   attribute :url
   attribute :songs
+  attribute :form_count
+
+  validates :form_count, presence: true
 
   def execute
+    return false unless valid?
+
     save!
   end
 
@@ -23,8 +28,10 @@ class CdFormObject
     ActiveRecord::Base.transaction do
       cd = Cd.new(format: format, picture: picture, title: title, release_date: release_date, price: price, url: url)
       cd.save!
-      song = cd.songs.build(songs)
-      song.save!
+      form_count.times.each do |num|
+        song = cd.songs.build(name: songs["name_#{num+1}"], track_number: songs["track_number_#{num+1}"])
+        song.save!
+      end
     end
     true
   rescue StandardError => e

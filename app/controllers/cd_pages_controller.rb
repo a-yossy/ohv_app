@@ -24,6 +24,8 @@ class CdPagesController < ApplicationController
   end
 
   def cd_form_object_params
-    params.require(:cd_form_object).permit(:format, :picture, :title, :release_date, :price, :url, songs: %i[name track_number])
+    form_count = params[:form_count].to_i
+    songs_params = form_count.times.map { |num| ["name_#{num+1}".to_sym, "track_number_#{num+1}".to_sym] }.flatten
+    params.require(:cd_form_object).permit(:format, :picture, :title, :release_date, :price, :url, songs: songs_params).merge(form_count: form_count)
   end
 end
