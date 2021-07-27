@@ -22,12 +22,24 @@
         = f.label :url
         = f.text_field :url, class: 'form-control'
 
-        = f.fields_for :songs do |song|
+        #demo-area.form-group
+          .unit.input-group.mb-2
+            .input-group-prepend
+              = f.fields_for :songs_attributes do |song|
 
-          = song.label :name
-          = song.text_field :name, class: 'form-control'
+                = song.label :name
+                = song.text_field :name, class: 'form-control'
 
-          = song.label :track_number
-          = song.number_field :track_number, class: 'form-control'
+                = song.label :track_number
+                = song.number_field :track_number, class: 'form-control'
 
+            .demo-minus.input-group-append
+              span.btn.btn-danger
+                | 削除する
+
+        #demo-plus.btn.btn-primary
+          | 追加する
+        = hidden_field_tag :form_count, 1
+        br
         = f.submit "作成する", class: "btn btn-primary"
+= javascript_pack_tag 'cd_pages/form'
