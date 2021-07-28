@@ -34,6 +34,6 @@ class CdPagesController < ApplicationController
   end
 
   def songs_params
-    form_count.times.map { |num| ["name_#{num+1}".to_sym, "track_number_#{num+1}".to_sym] }.flatten
+    form_count.times.map { |num| ["name_#{num + 1}".to_sym, "track_number_#{num + 1}".to_sym] }.flatten
   end
 end

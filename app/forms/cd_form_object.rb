@@ -29,7 +29,7 @@ class CdFormObject
       cd = Cd.new(format: format, picture: picture, title: title, release_date: release_date, price: price, url: url)
       cd.save!
       form_count.times.each do |num|
-        song = cd.songs.build(name: songs["name_#{num+1}"], track_number: songs["track_number_#{num+1}"])
+        song = cd.songs.build(name: songs["name_#{num + 1}"], track_number: songs["track_number_#{num + 1}"])
         song.save!
       end
     end
