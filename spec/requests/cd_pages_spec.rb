@@ -11,7 +11,7 @@ RSpec.describe CdPagesController, type: :request do
   end
 
   describe "#show" do
-    let(:cd) { create(:cd, picture: "1st demo.jpg") }
+    let(:cd) { create(:cd) }
 
     it do
       get cd_page_path(cd)
