@@ -5,8 +5,6 @@ class CdFormObject
   include ActiveModel::Attributes
   include ActiveRecord::AttributeAssignment
 
-  FORM_COUNT = 10
-
   attribute :format
   attribute :picture
   attribute :title
