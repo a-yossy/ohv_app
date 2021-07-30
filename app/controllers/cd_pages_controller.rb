@@ -34,6 +34,11 @@ class CdPagesController < ApplicationController
     end
   end
 
+  def destroy
+    Cd.find_by(id: params[:id]).destroy
+    redirect_to action: :index
+  end
+
   private
 
   def cd_params

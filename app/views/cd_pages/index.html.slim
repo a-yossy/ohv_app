@@ -7,3 +7,6 @@
         = image_tag cd.picture.url, :height => '500'
     - if admin_signed_in?
       = link_to "編集", edit_cd_page_path(cd)
+      |  /
+      = "\r"
+      = link_to "削除", cd_page_path(cd), method: :delete, data: { confirm: "本当に消しますか？" }

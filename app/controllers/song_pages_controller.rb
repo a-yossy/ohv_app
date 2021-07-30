@@ -14,6 +14,12 @@ class SongPagesController < ApplicationController
     end
   end
 
+  def destroy
+    @song = Song.find_by(id: params[:id])
+    @song.destroy
+    redirect_to cd_page_path(@song.cd_id)
+  end
+
   def song_params
     params.require(:song).permit(:name, :track_number)
   end
