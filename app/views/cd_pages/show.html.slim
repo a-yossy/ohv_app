@@ -20,7 +20,10 @@
             = song.track_number
             | . 
             = song.name
+            - if admin_signed_in?
+              = link_to "編集", edit_song_page_path(song)
             br
+
         hr
         p[style="text-align: left"]
           |  Price:¥

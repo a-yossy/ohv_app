@@ -23,7 +23,22 @@ class CdPagesController < ApplicationController
     end
   end
 
+  def edit
+    @cd = Cd.find_by(id: params[:id])
+  end
+
+  def update
+    @cd = Cd.find_by(id: params[:id])
+    if @cd.update(cd_params)
+      redirect_to action: :show, id: @cd.id
+    end
+  end
+
   private
+
+  def cd_params
+    params.require(:cd).permit(:format, :picture, :title, :release_date, :price, :url)
+  end
 
   def cd_form_object_params
     params.require(:cd_form_object).permit(:format, :picture, :title, :release_date, :price, :url, songs: songs_params).merge(form_count: form_count)
