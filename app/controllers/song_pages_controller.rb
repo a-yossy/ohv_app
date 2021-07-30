@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class SongPagesController < ApplicationController
+  before_action :authenticate_admin!, only: %i[edit update destroy]
+
   def edit
     @song = Song.find_by(id: params[:id])
   end

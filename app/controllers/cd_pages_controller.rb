@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class CdPagesController < ApplicationController
+  before_action :authenticate_admin!, only: %i[new create edit update destroy]
+
   def index
     @cds = Cd.recently_released_at
   end
