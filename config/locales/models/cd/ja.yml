@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    attributes:
+      cd:
+        format: "フォーマット"
+        picture: "写真"
+        title: "タイトル"
+        release_date: "発売日"
+        price: "価格"
+        url: "url"

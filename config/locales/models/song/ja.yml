@@ -1,0 +1,6 @@
+ja:
+  activerecord:
+    attributes:
+      song:
+        name: "名前"
+        track_number: "トラックナンバー"
