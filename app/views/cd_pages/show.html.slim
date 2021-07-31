@@ -20,7 +20,13 @@
             = song.track_number
             | . 
             = song.name
+            - if admin_signed_in?
+              = link_to "編集", edit_song_page_path(song)
+              |  /
+              = "\r"
+              = link_to "削除", song_page_path(song), method: :delete, data: { confirm: "本当に消しますか？" }
             br
+
         hr
         p[style="text-align: left"]
           |  Price:¥

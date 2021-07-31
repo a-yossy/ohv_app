@@ -1,0 +1,9 @@
+ja:
+  activemodel:
+    attributes:
+      cd_form_object:
+        format: "フォーマット"
+        picture: "写真"
+        title: "タイトル"
+        release_date: "発売日"
+        price: "価格"
