@@ -110,4 +110,29 @@ RSpec.describe CdPagesController, type: :request do
       end
     end
   end
+
+  describe "#destroy" do
+    let!(:cd) { create(:cd) }
+    let!(:song1) { create(:song, cd_id: cd.id) }
+    let!(:song2) { create(:song, cd_id: cd.id) }
+    subject { delete cd_page_path cd }
+
+    context "when user logs in" do
+      let(:admin) { create(:admin) }
+      before { login_as(admin) }
+
+      it do
+        expect { subject }.to change(Cd, :count).by(-1).and change(Song, :count).by(-2)
+        expect(response).to redirect_to cd_pages_path
+        expect(flash[:success]).to eq I18n.t "cd_pages.destroy.success"
+      end
+    end
+
+    context "when user does not log in" do
+      it do
+        expect { subject }.to change(Cd, :count).by(0)
+        expect(response).to redirect_to new_admin_session_path
+      end
+    end
+  end
 end

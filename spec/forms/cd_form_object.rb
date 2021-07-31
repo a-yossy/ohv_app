@@ -14,9 +14,6 @@ RSpec.describe CdFormObject, type: :model do
     let(:cd_form_object) {
       described_class.new(format: "format", picture: picture, title: "title", release_date: "2020-01-01", price: 1000, url: "https://linkco.re/r1zyVcrS",
                           songs: {"name_1" => "name_1", "track_number_1" => 1, "name_2" => "name_2", "track_number_2" => 2}, form_count: 2)
-    }
-    let(:song1) { build(:song) }
-    let(:song2) { build(:song) }
 
     subject { cd_form_object.execute }
 
