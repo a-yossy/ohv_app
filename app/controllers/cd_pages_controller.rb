@@ -19,6 +19,7 @@ class CdPagesController < ApplicationController
   def create
     @cd_form_object = CdFormObject.new(cd_form_object_params)
     if @cd_form_object.execute
+      flash[:success] = t ".success"
       redirect_to action: :index
     else
       render :new
@@ -32,12 +33,14 @@ class CdPagesController < ApplicationController
   def update
     @cd = Cd.find_by(id: params[:id])
     if @cd.update(cd_params)
+      flash[:success] = t ".success"
       redirect_to action: :show, id: @cd.id
     end
   end
 
   def destroy
     Cd.find_by(id: params[:id]).destroy
+    flash[:success] = t ".success"
     redirect_to action: :index
   end
 

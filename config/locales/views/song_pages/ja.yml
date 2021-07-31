@@ -1,0 +1,6 @@
+ja:
+  song_pages:
+    update:
+      success: "更新しました"
+    destroy:
+      success: "削除しました"

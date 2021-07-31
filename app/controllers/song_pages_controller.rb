@@ -10,6 +10,7 @@ class SongPagesController < ApplicationController
   def update
     @song = Song.find_by(id: params[:id])
     if @song.update(song_params)
+      flash[:success] = t ".success"
       redirect_to cd_page_path(@song.cd_id)
     else
       render :edit
@@ -19,6 +20,7 @@ class SongPagesController < ApplicationController
   def destroy
     @song = Song.find_by(id: params[:id])
     @song.destroy
+    flash[:success] = t ".success"
     redirect_to cd_page_path(@song.cd_id)
   end
 
