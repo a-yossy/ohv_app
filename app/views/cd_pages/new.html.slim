@@ -1,0 +1,32 @@
+.content
+  .row
+    .col-md-6.col-md-offset-3
+      = form_with model: @cd_form_object, url: cd_pages_path do |f|
+        = render 'shared/error_messages', object: f.object
+
+        = f.label :format
+        = f.text_field :format, class: 'form-control'
+
+        = f.label :picture
+        = f.file_field :picture, accept: 'image/jpeg,image/gif,image/png'
+
+        = f.label :title
+        = f.text_field :title, class: 'form-control'
+
+        = f.label :release_date
+        = f.date_select :release_date, class: 'form-control'
+
+        = f.label :price
+        = f.number_field :price, class: 'form-control'
+
+        = f.label :url
+        = f.text_field :url, class: 'form-control'
+
+        .js-add-song-form
+          '追加
+        .js-song-form
+        = hidden_field_tag :form_count, 0
+
+        = f.submit "作成する", class: "btn btn-primary"
+
+= javascript_pack_tag 'cd_pages/form'

@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resource :live_calendar_page, only: %i[show]
   resources :live_pages, only: %i[index new create edit update destroy]
   resource :contact_page, only: %i[new create]
-  resources :cd_pages, only: %i[index show]
+  resources :cd_pages
+  resources :song_pages, only: %i[edit update destroy]
   resources :news_pages
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
