@@ -44,7 +44,7 @@ RSpec.describe CdPagesController, type: :request do
     subject {
       post cd_pages_path,
            params: { cd_form_object: { format: "format", picture: picture, title: "title", release_date: "2021-01-01", price: 1000, url: "https://linkco.re/r1zyVcrS",
-                                       songs: [name_1: "name_1", track_number_1: 1, name_2: "name_2", track_number_2: 2], form_count: 2 } }
+                                       songs: {name_1: "name_1", track_number_1: 1, name_2: "name_2", track_number_2: 2} }, form_count: 2 }
     }
 
     context "when user logs in" do
@@ -52,9 +52,7 @@ RSpec.describe CdPagesController, type: :request do
       before { login_as(admin) }
 
       it do
-        expect { subject }.to change(Cd, :count).by(1)
-        pending
-        expect { subject }.to change(Song, :count).by(2)
+        expect { subject }.to change(Cd, :count).by(1).and change(Song, :count).by(2)
         expect(response).to redirect_to cd_pages_path
         expect(flash[:success]).to eq I18n.t "cd_pages.create.success"
       end
