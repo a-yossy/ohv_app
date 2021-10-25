@@ -3,7 +3,6 @@
 class Cd < ApplicationRecord
   has_many :songs, dependent: :destroy
   scope :recently_released_at, -> { order(release_date: :desc) }
-  mount_uploader :picture, PictureUploader
   validates :format, presence: true
   validates :picture, presence: true
   validates :title, presence: true

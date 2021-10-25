@@ -4,7 +4,7 @@
   - @informations.each do |information|
     .inner_news_index
       = link_to news_page_path(information) do
-        = image_tag information.picture.url, :height => '400'
+        = image_tag information.picture, :height => '400'
         br
         .string_news_index
           b

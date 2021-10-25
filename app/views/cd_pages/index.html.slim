@@ -4,7 +4,7 @@
   - @cds.each do |cd|
     .inner_music
       = link_to cd_page_path(cd) do
-        = image_tag cd.picture.url, :height => '500'
+        = image_tag cd.picture, :height => '500'
     - if admin_signed_in?
       = link_to "編集", edit_cd_page_path(cd)
       |  /

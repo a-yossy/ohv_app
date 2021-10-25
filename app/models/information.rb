@@ -2,7 +2,6 @@
 
 class Information < ApplicationRecord
   scope :recently_announced_at, -> { order(announcement_date: :desc) }
-  mount_uploader :picture, PictureUploader
   validates :title, presence: true
   validates :picture, presence: true
   validates :announcement_date, presence: true
