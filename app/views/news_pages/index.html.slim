@@ -2,6 +2,10 @@
   - if admin_signed_in?
     = link_to "新しいデータを作成", new_news_page_path
   - @informations.each do |information|
+    - if information.priority == 1
+      p
+        b
+          |  Pick up!!
     .inner_news_index
       = link_to news_page_path(information) do
         = image_tag information.picture, :height => '400'
