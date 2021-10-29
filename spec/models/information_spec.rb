@@ -25,6 +25,15 @@ RSpec.describe Information, type: :model do
     end
   end
 
+  describe "pick_up" do
+    let!(:important_information) { create(:information, priority: 1) }
+    let!(:unimportant_information) { create(:information, priority: 0) }
+
+    it do
+      expect(described_class.pick_up.to_a).to eq [important_information, unimportant_information]
+    end
+  end
+
   describe "picture_size" do
     let(:information) { build(:information, picture: picture) }
 
