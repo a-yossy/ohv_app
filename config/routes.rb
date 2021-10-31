@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :cd_pages
   resources :song_pages, only: %i[edit update destroy]
   resources :news_pages
+  devise_scope :admin do
+    get '/admins/sign_out' => 'devise/sessions#destroy'
+  end
   devise_for :admins, controllers: {
     sessions: 'admins/sessions'
   }

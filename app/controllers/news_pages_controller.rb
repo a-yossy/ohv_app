@@ -4,7 +4,7 @@ class NewsPagesController < ApplicationController
   before_action :authenticate_admin!, only: %i[new create edit update destroy]
 
   def index
-    @informations = Information.recently_announced_at.page(params[:page]).per(5)
+    @informations = Information.priority_order.recently_announced_at.page(params[:page]).per(5)
   end
 
   def show

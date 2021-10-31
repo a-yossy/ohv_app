@@ -95,7 +95,8 @@ Information.create(title: "1st EP “錯綜“をリリースしました。",
                              02: Thistle
                              03: Ruhuna(feat. 水咲加奈)
                              04: Transcend
-                             05: 錯綜する片隅")
+                             05: 錯綜する片隅",
+                   priority: 1)
 Information.create(title: "東京 新宿ANTIKNOCKでライブが決定しました。",
                    picture: "live_0224.jpeg", announcement_date: "2020-01-18",
                    content: "2020.02.24 Mon
