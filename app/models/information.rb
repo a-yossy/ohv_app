@@ -2,7 +2,7 @@
 
 class Information < ApplicationRecord
   scope :recently_announced_at, -> { order(announcement_date: :desc) }
-  scope :pick_up, -> { order(priority: :desc) }
+  scope :priority_order, -> { order(priority: :desc) }
   validates :title, presence: true
   validates :picture, presence: true
   validates :announcement_date, presence: true
